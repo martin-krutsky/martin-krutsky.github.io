@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: Martin Krutský
 description: My Data Science/Machine Learning Portfolio Website
+plugins:
+  - jemoji
