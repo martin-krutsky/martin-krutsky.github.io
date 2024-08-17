@@ -11,41 +11,64 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in AI interpretability, Czech Technical University, 2024-2028 (expected)
+* M.S. in AI, Czech Technical University, 2024
+  * Erasmus studies at Aalto University, 2023
+* B.S. in CS & AI, Czech Technical University, 2021
 
-Work experience
+Other Courses
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Human-Aligned AI Summer School – Prague, Czechia, 2024
+* Summer School AI & Ethics – Erlangen, Germany, 2022
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Academic experience
+======
+* since 2024: AI Researcher
+  * Intelligent Data Analysis Lab, FEE CTU
+  * Research topics: GNN interpretability, Geometric Deep Learning, AI safety
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2024: Master's Thesis
+  * Topic: [Interpretable Symmetry-Aware Deep Learning for Planning](https://dspace.cvut.cz/handle/10467/115032)
+  * Supervisor: [Gustav Šír](https://gustiks.github.io/)
+
+* 2021: Bachelor's Thesis
+  * Topic: [Exploring Symmetries in Deep Learning](https://dspace.cvut.cz/handle/10467/94670)
+  * Supervisor: [Gustav Šír](https://gustiks.github.io/)
+
+* 2018, 2019: Student Research Projects
+  * Center for Machine Perception, FEE CTU
+
+Industry experience
+======
+* 2023-2024 ML Researcher and Data Analyst
+  * Leeaf
+  * Responsibilities: Researching ML methods on medical data for improving IVF treatment
+
+* 2022: Software Engineering Intern
+  * Microsoft
+  * Responsibilities: Modelling monitoring metrics of server load
+
+* 2020-2022: Machine Learning Developer
+  * Blindspot Solutions
+  * Responsibilities: NLP solutions (classification, NER), chatbots, deployment with Docker
+
+* 2019-2020: Part-time Developer
+  * Barclays
+  * Responsibilities: Developing server monitoring system with data analytics
   
+Professional Interests
+======
+* Responsible AI 
+  * AI ethics
+  * AI alignment
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* ML/DL with PyTorch (Geometric), scikit-learn, Pandas, etc.
+* LLMs, LangChain, OpenAI
+* Transformers, Diffusers
+* Python, Flask, FastAPI
+* Docker, Java
   
 Talks
 ======
@@ -53,12 +76,7 @@ Talks
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
+Service
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* since 2024: President of the [Czech Alpha Chapter of Upsilon Pi Epsilon](http://upe.cvut.cz/)
+* 2014-2018: Chess tutor at [ŠK Teplice](https://skteplice.cz/)
