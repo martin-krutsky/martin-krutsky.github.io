@@ -23,44 +23,36 @@ Other Courses
 
 Academic experience
 ======
-* since 2024: AI Researcher
-  * Intelligent Data Analysis Lab, FEE CTU
+* since 2024: AI Researcher @ [IDA](https://ida.fel.cvut.cz/), Czech Technical University
   * Research topics: GNN interpretability, Geometric Deep Learning, AI safety
 
-* 2024: Master's Thesis
-  * Topic: [Interpretable Symmetry-Aware Deep Learning for Planning](https://dspace.cvut.cz/handle/10467/115032)
+* 2024: Master's Thesis [Interpretable Symmetry-Aware Deep Learning for Planning](https://dspace.cvut.cz/handle/10467/115032)
   * Supervisor: [Gustav Šír](https://gustiks.github.io/)
 
-* 2021: Bachelor's Thesis
-  * Topic: [Exploring Symmetries in Deep Learning](https://dspace.cvut.cz/handle/10467/94670)
+* 2021: Bachelor's Thesis [Exploring Symmetries in Deep Learning](https://dspace.cvut.cz/handle/10467/94670)
   * Supervisor: [Gustav Šír](https://gustiks.github.io/)
 
-* 2018, 2019: Student Research Projects
-  * Center for Machine Perception, FEE CTU
+* 2018, 2019: Student Research Projects @ [CMP](https://cmp.felk.cvut.cz/), Czech Technical University
 
 Industry experience
 ======
-* 2023-2024 ML Researcher and Data Analyst
-  * Leeaf
+* 2023-2024 ML Researcher and Data Analyst @ [Leeaf](https://leeaf.life/)
   * Responsibilities: Researching ML methods on medical data for improving IVF treatment
 
-* 2022: Software Engineering Intern
-  * Microsoft
+* 2022: Software Engineering Intern @ [Microsoft](https://www.microsoft.com/)
   * Responsibilities: Modelling monitoring metrics of server load
 
-* 2020-2022: Machine Learning Developer
-  * Blindspot Solutions
+* 2020-2022: Machine Learning Developer @ [Blindspot Solutions](https://blindspot.ai/)
   * Responsibilities: NLP solutions (classification, NER), chatbots, deployment with Docker
 
-* 2019-2020: Part-time Developer
-  * Barclays
+* 2019-2020: Part-time Developer @ [Barclays](https://home.barclays/)
   * Responsibilities: Developing server monitoring system with data analytics
   
 Professional Interests
 ======
 * Responsible AI 
-  * AI ethics
   * AI alignment
+  * AI ethics
 
 Skills
 ======
