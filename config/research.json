@@ -5,7 +5,7 @@
       "title": "NeSy Interpretability",
       "description": "Bridging the gap between deep learning, symbolic reasoning, and mechanistic interpretability to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks of well-defined expressivity into symbolic concepts.",
       "icon": "fas fa-network-wired",
-      "tags": ["Neuro-Symbolic AI", "Mechanistic Interpretability", "Deep Learning"]
+      "tags": ["Neuro-Symbolic AI", "Mech Interp", "Deep Learning"]
     },
     {
       "title": "Responsible AI",

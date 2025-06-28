@@ -5,6 +5,30 @@
   "institution": "Czech Technical University in Prague",
   "department": "Intelligent Data Analysis Lab",
   "position": "PhD Student in Artificial Intelligence",
+  "buttons": [
+    {
+      "text": "Get in Touch",
+      "url": "mailto:Martin.Krutsky@fel.cvut.cz",
+      "class": "btn btn-primary",
+      "icon": "fas fa-envelope"
+    },
+    {
+      "text": "Download CV",
+      "url": "assets/files/cv.pdf",
+      "class": "btn btn-secondary",
+      "icon": "fas fa-download",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "text": "Visit our RAI page",
+      "url": "https://rai.fel.cvut.cz/",
+      "class": "btn btn-tertiary",
+      "icon": "fas fa-external-link-alt",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ],
   "urls": {
     "website": "martin-krutsky.github.io",
     "github": "https://github.com/martin-krutsky",
@@ -53,8 +77,14 @@
       },
       {
         "text": "CV",
-        "url": "assets/files/cv.pdf"
+        "url": "assets/files/cv.pdf",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
       }
     ]
+  },
+  "copyright": {
+    "text": "© 2025 Martin Krutský. All rights reserved.",
+    "poweredBy": "Powered by GitHub Pages"
   }
 } 

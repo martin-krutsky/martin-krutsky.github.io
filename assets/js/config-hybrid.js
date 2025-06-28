@@ -59,7 +59,9 @@ class HybridWebsiteConfig {
                     links: [
                         {
                             text: "CV",
-                            url: "assets/files/cv.pdf"
+                            url: "assets/files/cv.pdf",
+                            target: "_blank",
+                            rel: "noopener noreferrer"
                         },
                         {
                             text: "Talks",
@@ -197,9 +199,20 @@ class HybridWebsiteConfig {
         // Update navigation links
         const navLinks = document.querySelector('.visible-links');
         if (navLinks && this.config.personal.navigation) {
-            navLinks.innerHTML = this.config.personal.navigation.links.map(link => 
-                `<li><a href="${link.url}" class="nav-link">${link.text}</a></li>`
-            ).join('');
+            navLinks.innerHTML = this.config.personal.navigation.links.map(link => {
+                let linkHtml = `<li><a href="${link.url}" class="nav-link"`;
+                
+                // Add target and rel attributes if specified
+                if (link.target) {
+                    linkHtml += ` target="${link.target}"`;
+                }
+                if (link.rel) {
+                    linkHtml += ` rel="${link.rel}"`;
+                }
+                
+                linkHtml += `>${link.text}</a></li>`;
+                return linkHtml;
+            }).join('');
         }
     }
 
@@ -298,7 +311,7 @@ class HybridWebsiteConfig {
                     <p class="paper-description">${paper.description}</p>
                     <div class="paper-links">
                         ${paper.links.map(link => `
-                            <a href="${link.url}" class="paper-link">
+                            <a href="${link.url}" class="paper-link" target="_blank" rel="noopener noreferrer">
                                 <i class="${link.icon}"></i>
                                 ${link.text}
                             </a>
@@ -359,7 +372,7 @@ class HybridWebsiteConfig {
         if (footerSocial && this.config.personal.social) {
             const socialLinks = Object.values(this.config.personal.social);
             footerSocial.innerHTML = socialLinks.map(link => `
-                <a href="${link.url}" title="${link.platform}">
+                <a href="${link.url}" title="${link.platform}" target="_blank" rel="noopener noreferrer">
                     <i class="${link.icon}"></i>
                 </a>
             `).join('');
@@ -405,7 +418,7 @@ class HybridWebsiteConfig {
                         <p class="talk-description">${talk.description}</p>
                         <div class="talk-links">
                             ${talk.links.map(link => `
-                                <a href="${link.url}" class="talk-link">
+                                <a href="${link.url}" class="talk-link" target="_blank" rel="noopener noreferrer">
                                     <i class="${link.icon}"></i>
                                     ${link.text}
                                 </a>
@@ -459,7 +472,7 @@ class HybridWebsiteConfig {
                         <p class="publication-description">${paper.description}</p>
                         <div class="publication-links">
                             ${paper.links.map(link => `
-                                <a href="${link.url}" class="publication-link">
+                                <a href="${link.url}" class="publication-link" target="_blank" rel="noopener noreferrer">
                                     <i class="${link.icon}"></i>
                                     ${link.text}
                                 </a>

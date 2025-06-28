@@ -1,6 +1,13 @@
 {
   "title": "Martin Krutský — AI researcher",
   "description": "PhD student in artificial intelligence focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
+  "sections": {
+    "areasOfExpertise": "Areas of Expertise",
+    "publications": "Publications",
+    "aboutMe": "About Me",
+    "connect": "Connect",
+    "talks": "Talks"
+  },
   "person": {
     "title": "PhD Student in Artificial Intelligence",
     "subtitle": "Focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
