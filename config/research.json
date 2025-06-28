@@ -9,7 +9,7 @@
     },
     {
       "title": "Responsible AI",
-      "description": "Researching more responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the human-centric and governance-oriented perspective.",
+      "description": "Researching responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the human-centric and governance-oriented perspective.",
       "icon": "fas fa-shield-alt",
       "tags": ["AI Ethics", "AI Safety", "Explainability", "AI Governance"],
       "link": {
@@ -19,7 +19,7 @@
     },
     {
       "title": "Custom AI Solutions",
-      "description": "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, Agents, MCP...), as well as domain-specific machine learning solutions based on your data.",
+      "description": "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, Agents, MCP...), as well as domain-specific data-based machine learning solutions.",
       "icon": "fas fa-brain",
       "tags": ["LLMs", "NLP", "Computer Vision"]
     }
