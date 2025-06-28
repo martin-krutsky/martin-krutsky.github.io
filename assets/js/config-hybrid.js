@@ -68,6 +68,35 @@ class HybridWebsiteConfig {
                             url: "talks.html"
                         }
                     ]
+                },
+                previouslyAt: {
+                    title: "Previously Worked At",
+                    companies: [
+                        {
+                            name: "Leeaf",
+                            logo: "assets/images/logos/leeaf-logo.svg",
+                            url: "https://leeaf.life/",
+                            alt: "Leeaf logo"
+                        },
+                        {
+                            name: "Microsoft",
+                            logo: "assets/images/logos/microsoft-logo.png",
+                            url: "https://www.microsoft.com/",
+                            alt: "Microsoft logo"
+                        },
+                        {
+                            name: "Blindspot Solutions",
+                            logo: "assets/images/logos/blindspot-logo.png",
+                            url: "https://blindspot.ai/",
+                            alt: "Blindspot Solutions logo"
+                        },
+                        {
+                            name: "Barclays",
+                            logo: "assets/images/logos/barclays-logo.png",
+                            url: "https://www.barclays.com/",
+                            alt: "Barclays logo"
+                        }
+                    ]
                 }
             },
             site: {
@@ -175,6 +204,7 @@ class HybridWebsiteConfig {
         this.updateFooter();
         this.updateTalksPage();
         this.updatePublicationsPage();
+        this.updatePreviouslyAtSection();
     }
 
     updatePageTitle() {
@@ -481,6 +511,17 @@ class HybridWebsiteConfig {
                     </div>
                 `).join('');
             }
+        }
+    }
+
+    updatePreviouslyAtSection() {
+        const companyLogos = document.querySelector('.company-logos');
+        if (companyLogos && this.config.personal && this.config.personal.previouslyAt) {
+            companyLogos.innerHTML = this.config.personal.previouslyAt.companies.map(company => `
+                <a href="${company.url}" class="company-logo" target="_blank" rel="noopener noreferrer" title="${company.name}">
+                    <img src="${company.logo}" alt="${company.alt}" onerror="this.style.display='none'">
+                </a>
+            `).join('');
         }
     }
 }

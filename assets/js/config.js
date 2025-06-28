@@ -59,7 +59,7 @@ class WebsiteConfig {
         document.head.appendChild(style);
 
         // Add loading class to main content areas
-        const contentAreas = document.querySelectorAll('.hero-section, .research-areas, .papers-section, .about-section, .modern-footer, .talks-section');
+        const contentAreas = document.querySelectorAll('.hero-section, .research-areas, .papers-section, .about-section, .modern-footer, .talks-section, .previously-at-section');
         contentAreas.forEach(area => {
             area.classList.add('loading-content');
         });
@@ -122,6 +122,7 @@ class WebsiteConfig {
         this.updateFooter();
         this.updateTalksPage();
         this.updatePublicationsPage();
+        this.updatePreviouslyAtSection();
     }
 
     updatePageTitle() {
@@ -467,6 +468,17 @@ class WebsiteConfig {
                     </div>
                 `).join('');
             }
+        }
+    }
+
+    updatePreviouslyAtSection() {
+        const companyLogos = document.querySelector('.company-logos');
+        if (companyLogos && this.config.personal && this.config.personal.previouslyAt) {
+            companyLogos.innerHTML = this.config.personal.previouslyAt.companies.map(company => `
+                <a href="${company.url}" class="company-logo" target="_blank" rel="noopener noreferrer" title="${company.name}">
+                    <img src="${company.logo}" alt="${company.alt}" onerror="this.style.display='none'">
+                </a>
+            `).join('');
         }
     }
 }

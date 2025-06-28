@@ -83,6 +83,35 @@
       }
     ]
   },
+  "previouslyAt": {
+    "title": "Previously Worked At",
+    "companies": [
+      {
+        "name": "Leeaf",
+        "logo": "assets/images/logos/leeaf-logo.svg",
+        "url": "https://leeaf.life/",
+        "alt": "Leeaf logo"
+      },
+      {
+        "name": "Microsoft",
+        "logo": "assets/images/logos/microsoft-logo.png",
+        "url": "https://www.microsoft.com/",
+        "alt": "Microsoft logo"
+      },
+      {
+        "name": "Blindspot Solutions",
+        "logo": "assets/images/logos/blindspot-logo.png",
+        "url": "https://blindspot.ai/",
+        "alt": "Blindspot Solutions logo"
+      },
+      {
+        "name": "Barclays",
+        "logo": "assets/images/logos/barclays-logo.png",
+        "url": "https://www.barclays.com/",
+        "alt": "Barclays logo"
+      }
+    ]
+  },
   "copyright": {
     "text": "© 2025 Martin Krutský. All rights reserved.",
     "poweredBy": "Powered by GitHub Pages"
