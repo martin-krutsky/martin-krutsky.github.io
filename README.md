@@ -2,7 +2,7 @@
 
 This is a personal academic website for Martin Krutský, a PhD student in AI at the Czech Technical University in Prague. The website is designed to be compatible with GitHub Pages and showcases research areas, publications, talks, and professional information.
 
-## �� Key Features
+## ✨ Key Features
 
 - **Modular Configuration**: Each section has its own configuration file for easy management
 - **Modern Design**: Clean, responsive design with gradient backgrounds and smooth animations
