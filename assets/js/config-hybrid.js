@@ -130,7 +130,7 @@ class HybridWebsiteConfig {
                     },
                     {
                         title: "Custom AI Solutions",
-                        description: "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, Agents, MCP...), as well as domain-specific machine learning solutions based on your data.",
+                        description: "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, agents, evals, etc.), as well as domain-specific machine learning solutions based on your data.",
                         icon: "fas fa-brain",
                         tags: ["LLMs", "NLP", "Computer Vision"]
                     }
