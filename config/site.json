@@ -1,0 +1,14 @@
+{
+  "title": "Martin Krutský — AI researcher",
+  "description": "PhD student in artificial intelligence focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
+  "person": {
+    "title": "PhD Student in Artificial Intelligence",
+    "subtitle": "Focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
+    "description": "Exploring the intersection of deep learning, structured knowledge, and symbolic approaches to extraction of understandable concepts from AI systems.",
+    "about": [
+      "I am a PhD student at the Intelligent Data Analysis Lab, Czech Technical University in Prague, where I research neuro-symbolic interpretability, graph neural networks, and geometric deep learning; all with the aim to create more trustworthy AI systems. I have experience in studying expressivity of neural networks, as well as symmetry-invariant deep learning.",
+      "I am passionate about developing AI in a more responsible way. At our department, we started an initiative organizing events and discussion about the topic of Responsible AI: from AI ethics and fairness to AI safety and alignment. Recently, we also started our own research agenda, tackling the problem of evaluation of explainable AI techniques from human and regulatory perspectives.",
+      "Apart from research, you can also find me developing practical AI solutions based on LLMs (RAG, agents, evals...), as well as classical machine learning algorithms."
+    ]
+  }
+} 

@@ -1,0 +1,60 @@
+{
+  "name": "Martin Krutský",
+  "email": "Martin.Krutsky@fel.cvut.cz",
+  "location": "Prague, Czech Republic",
+  "institution": "Czech Technical University in Prague",
+  "department": "Intelligent Data Analysis Lab",
+  "position": "PhD Student in Artificial Intelligence",
+  "urls": {
+    "website": "martin-krutsky.github.io",
+    "github": "https://github.com/martin-krutsky",
+    "linkedin": "https://www.linkedin.com/in/martin-krutsky",
+    "googleScholar": "https://scholar.google.com/citations?user=0oqgfqMAAAAJ",
+    "orcid": "http://orcid.org/0009-0000-9710-1147",
+    "cv": "assets/files/cv.pdf",
+    "rai": "https://rai.fel.cvut.cz/"
+  },
+  "social": {
+    "github": {
+      "platform": "GitHub",
+      "url": "https://github.com/martin-krutsky",
+      "icon": "fab fa-github"
+    },
+    "linkedin": {
+      "platform": "LinkedIn", 
+      "url": "https://www.linkedin.com/in/martin-krutsky",
+      "icon": "fab fa-linkedin"
+    },
+    "googleScholar": {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=0oqgfqMAAAAJ",
+      "icon": "ai ai-google-scholar"
+    },
+    "orcid": {
+      "platform": "ORCID",
+      "url": "http://orcid.org/0009-0000-9710-1147",
+      "icon": "ai ai-orcid"
+    },
+    "email": {
+      "platform": "Email",
+      "url": "mailto:Martin.Krutsky@fel.cvut.cz",
+      "icon": "fas fa-envelope"
+    }
+  },
+  "navigation": {
+    "links": [
+      {
+        "text": "Publications",
+        "url": "publications.html"
+      },
+      {
+        "text": "Talks",
+        "url": "talks.html"
+      },
+      {
+        "text": "CV",
+        "url": "assets/files/cv.pdf"
+      }
+    ]
+  }
+} 

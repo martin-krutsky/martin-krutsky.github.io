@@ -1,0 +1,68 @@
+{
+  "title": "Talks",
+  "description": "A collection of my presentations, talks, and speaking engagements at conferences, workshops, and public events.",
+  "talks": [
+    {
+      "title": "Assessing Explainability for AI Safety Governance",
+      "date": "May 27, 2025",
+      "venue": "International Conference on Large-Scale AI Risks, KU Leuven, Belgium",
+      "description": "Presented our work on a safety- and governance-informed assessment framework of AI explainability techniques. The proposal, combining AI safety and AI regulation desiderata, was well-received by the interdisciplinary audience of computer scientists, philosophers, lawyers, and policy makers. We proposed a 5-dimensional framework for assessing XAI methods: understandability to subjects and auditors, veracity, actionability, and scalability.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/conferences/leuven/2025/05/27/leuven-risk/index.html"
+        },
+        {
+          "text": "Book of abstracts",
+          "icon": "fas fa-book",
+          "url": "https://www.kuleuven.be/ethics-kuleuven/chair-ai/conference-ai-risks/xrisk-book_of_abstracts-1.pdf"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions of Explainability in AI Alignment",
+      "date": "May 22, 2025",
+      "venue": "29th International Student Scientific Conference (POSTER), Prague, Czechia",
+      "description": "Presented a poster on the current outcomes of our collaboration with Paula Gürtler. The work titled 'Dimensions of Explainability in AI Alignment' stood out during the poster session and the subsequent elevator pitch as an original, interdisciplinary proposal. It sparked interest among the conference committee and received positive feedback as an important validation of our efforts.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/conferences/prague/2025/05/22/poster-xai-alignment/index.html"
+        },
+        {
+          "text": "Proceedings",
+          "icon": "fas fa-book",
+          "url": "https://poster2025.sciencesconf.org/data/pages/POSTER_2025.pdf"
+        }
+      ]
+    },
+    {
+      "title": "Ethics in AI Development",
+      "date": "October 18, 2024",
+      "venue": "AI 4 ALL at AI Days 2024, Prague, Czechia",
+      "description": "Gave two talks on the ethics of AI from the perspective of technical researchers and developers. The first talk was tailored to high school students in the morning, and the second talk was aimed at the general public in the late afternoon. Topics covered included AI alignment, RLHF, jailbreaking, constitutional AI, and measuring ethics and morality in LLMs.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/prague/2024/10/18/aidev-ethics-talk-report/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Responsible AI in Prague",
+      "date": "November 3, 2023",
+      "venue": "Seminar for AI Days 2023, Prague, Czechia",
+      "description": "Organized and presented at a seminar mapping the landscape of Responsible AI projects in Prague. More than 50 people concerned with the responsible development of AI technologies attended to listen and discuss the many different societal impacts of AI. The talk covered the definition of Responsible AI, mapping of RAI efforts in Prague, and the relationship between AI ethics and AI safety.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/prague/2023/11/03/rai-talk-report/index.html"
+        }
+      ]
+    }
+  ]
+} 

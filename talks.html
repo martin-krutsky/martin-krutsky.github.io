@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .talks-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .talk-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .talk-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .talk-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .talk-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 0;
+            flex: 1;
+        }
+
+        .talk-date {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .talk-venue {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .talk-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .talk-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .talk-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .talk-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #666;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .empty-state p {
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .talk-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .talk-date {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Modern Masthead -->
+    <div class="modern-masthead">
+        <div class="masthead__inner-wrap">
+            <div class="masthead__menu">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-text"></span>
+                </a>
+                <ul class="visible-links">
+                    <!-- Navigation links will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title"></h1>
+                <p class="hero-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Talks Section -->
+    <div class="talks-section">
+        <!-- Talks will be populated by JavaScript -->
+    </div>
+
+    <!-- Modern Footer -->
+    <div class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3></h3>
+                <p></p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Areas of Expertise</h4>
+                <ul>
+                    <!-- Research areas will be populated by JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-social">
+                    <!-- Social links will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 Martin Krutský. All rights reserved.</p>
+                <p>Powered by GitHub Pages</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+</body>
+</html> 

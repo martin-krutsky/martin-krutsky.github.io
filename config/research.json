@@ -1,0 +1,27 @@
+{
+  "title": "Areas of Expertise",
+  "areas": [
+    {
+      "title": "NeSy Interpretability",
+      "description": "Bridging the gap between deep learning, symbolic reasoning, and mechanistic interpretability to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks of well-defined expressivity into symbolic concepts.",
+      "icon": "fas fa-network-wired",
+      "tags": ["Neuro-Symbolic AI", "Mechanistic Interpretability", "Deep Learning"]
+    },
+    {
+      "title": "Responsible AI",
+      "description": "Researching more responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the human-centric and governance-oriented perspective.",
+      "icon": "fas fa-shield-alt",
+      "tags": ["AI Ethics", "AI Safety", "Explainability", "AI Governance"],
+      "link": {
+        "text": "with my colleagues",
+        "url": "https://rai.fel.cvut.cz/authors-list.html"
+      }
+    },
+    {
+      "title": "Custom AI Solutions",
+      "description": "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, Agents, MCP...), as well as domain-specific machine learning solutions based on your data.",
+      "icon": "fas fa-brain",
+      "tags": ["LLMs", "NLP", "Computer Vision"]
+    }
+  ]
+} 
