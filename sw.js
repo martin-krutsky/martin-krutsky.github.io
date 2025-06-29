@@ -1,6 +1,7 @@
 // Service Worker for caching configuration files
 const CACHE_NAME = 'martin-krutsky-cache-v1';
 const CONFIG_FILES = [
+    '/config/version.json',
     '/config/site.json',
     '/config/personal.json',
     '/config/research.json',
@@ -23,31 +24,39 @@ self.addEventListener('install', (event) => {
     );
 });
 
-// Fetch event - serve from cache if available
+// Fetch event - serve from cache first, then update from network
 self.addEventListener('fetch', (event) => {
     // Only handle requests for configuration files
     if (CONFIG_FILES.some(file => event.request.url.includes(file))) {
         event.respondWith(
             caches.match(event.request)
-                .then((response) => {
-                    // Return cached version if available
-                    if (response) {
-                        return response;
-                    }
-                    
-                    // Otherwise fetch from network
-                    return fetch(event.request)
+                .then((cachedResponse) => {
+                    // Always fetch from network to check for updates
+                    const networkFetch = fetch(event.request)
                         .then((response) => {
-                            // Cache the response for future use
+                            // Update cache with new response if successful
                             if (response.status === 200) {
                                 const responseClone = response.clone();
                                 caches.open(CACHE_NAME)
                                     .then((cache) => {
                                         cache.put(event.request, responseClone);
+                                        console.log('Updated cache for:', event.request.url);
                                     });
                             }
                             return response;
+                        })
+                        .catch(() => {
+                            // Network failed, return null to use cache
+                            return null;
                         });
+
+                    // Return cached response immediately, network response will update cache in background
+                    if (cachedResponse) {
+                        return cachedResponse;
+                    }
+                    
+                    // If no cache, wait for network response
+                    return networkFetch;
                 })
                 .catch(() => {
                     // If both cache and network fail, return a basic response

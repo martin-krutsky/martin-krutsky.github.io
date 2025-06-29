@@ -693,10 +693,33 @@ body {
 }
 
 .talk-venue {
-    color: #764ba2;
-    font-weight: 600;
+    color: #666;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
     font-style: italic;
+}
+
+.talk-authors {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+/* Main page specific styling for talk authors - darker blue to match venue */
+.talks-section .talk-authors {
+    color: #764ba2;
+}
+
+.talk-tag {
+    background: #f8f9fa;
+    color: #764ba2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #e9ecef;
+    margin-right: 0.5rem;
 }
 
 .talk-description {

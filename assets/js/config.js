@@ -102,7 +102,7 @@ class WebsiteConfig {
         try {
             const response = await fetch(path, { 
                 signal: controller.signal,
-                cache: 'force-cache' // Use cached version if available
+                cache: 'default' // Let the service worker handle caching
             });
             clearTimeout(timeoutId);
             
@@ -463,7 +463,11 @@ class WebsiteConfig {
                         <h3 class="talk-title">${talk.title}</h3>
                         <span class="talk-date">${talk.date}</span>
                     </div>
-                    <div class="talk-venue">${talk.venue}</div>
+                    ${talk.authors ? `<div class="talk-authors">${talk.authors}</div>` : ''}
+                    <div class="talk-venue">
+                        ${talk.tags ? talk.tags.map(tag => `<span class="talk-tag">${tag}</span>`).join('') : ''}
+                        ${talk.venue}
+                    </div>
                     <p class="talk-description">${talk.description}</p>
                     <div class="talk-links">
                         ${talk.links.map(link => `
@@ -584,7 +588,11 @@ class WebsiteConfig {
                         <h3 class="talk-title">${talk.title}</h3>
                         <span class="talk-date">${talk.date}</span>
                     </div>
-                    <div class="talk-venue">${talk.venue}</div>
+                    ${talk.authors ? `<div class="talk-authors">${talk.authors}</div>` : ''}
+                    <div class="talk-venue">
+                        ${talk.tags ? talk.tags.map(tag => `<span class="talk-tag">${tag}</span>`).join('') : ''}
+                        ${talk.venue}
+                    </div>
                     <p class="talk-description">${talk.description}</p>
                     <div class="talk-links">
                         ${talk.links.map(link => `
