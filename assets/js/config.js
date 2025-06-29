@@ -187,15 +187,20 @@ class WebsiteConfig {
             aboutTitle.textContent = sections.aboutMe;
         }
 
-        // Update footer section titles
-        const footerAreasTitle = document.querySelector('.footer-section h4');
-        if (footerAreasTitle && sections.areasOfExpertise) {
-            footerAreasTitle.textContent = sections.areasOfExpertise;
+        // Update Previously worked at section title
+        const previouslyAtTitle = document.querySelector('.previously-at-section .section-title');
+        if (previouslyAtTitle && this.config.personal && this.config.personal.previouslyAt && this.config.personal.previouslyAt.title) {
+            previouslyAtTitle.textContent = this.config.personal.previouslyAt.title;
         }
 
-        const footerConnectTitle = document.querySelectorAll('.footer-section h4')[1];
-        if (footerConnectTitle && sections.connect) {
-            footerConnectTitle.textContent = sections.connect;
+        // Update footer section titles
+        const footerAreasTitles = document.querySelectorAll('.footer-section h4');
+        if (footerAreasTitles.length >= 1 && sections.areasOfExpertise) {
+            footerAreasTitles[0].textContent = sections.areasOfExpertise;
+        }
+
+        if (footerAreasTitles.length >= 2 && sections.connect) {
+            footerAreasTitles[1].textContent = sections.connect;
         }
     }
 
@@ -218,6 +223,12 @@ class WebsiteConfig {
         const heroDescription = document.querySelector('.hero-description');
         if (heroDescription) {
             heroDescription.textContent = this.config.site.person.description;
+        }
+
+        // Update profile image alt text
+        const profileImage = document.querySelector('.profile-image');
+        if (profileImage && this.config.personal.name) {
+            profileImage.alt = this.config.personal.name;
         }
 
         // Update hero buttons
