@@ -11,7 +11,7 @@
       "title": "Responsible AI",
       "description": "Researching responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the human-centric and governance-oriented perspective.",
       "icon": "fas fa-shield-alt",
-      "tags": ["AI Ethics", "AI Safety", "Explainability", "AI Governance"],
+      "tags": ["AI Ethics", "AI Safety", "Explainability", "Governance"],
       "link": {
         "text": "with my colleagues",
         "url": "https://rai.fel.cvut.cz/authors-list.html"

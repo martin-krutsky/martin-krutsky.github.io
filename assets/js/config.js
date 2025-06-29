@@ -9,6 +9,22 @@ class WebsiteConfig {
             talks: null,
             social: null
         };
+        
+        // Star symbol options - change this to test different styles
+        this.selectedIcon = {
+            icon: 'fas fa-star', // Font Awesome icon class
+            cssClass: 'selected-star-gradient' // CSS class for styling
+        };
+        
+        // Available options (uncomment the one you prefer):
+        // this.selectedIcon = { icon: 'far fa-star', cssClass: 'selected-star-outline' }; // Outlined star
+        // this.selectedIcon = { icon: 'fas fa-star', cssClass: 'selected-star-gradient' }; // Gradient star
+        // this.selectedIcon = { icon: 'fas fa-star', cssClass: 'selected-star-subtle' }; // Subtle gray
+        // this.selectedIcon = { icon: 'fas fa-star', cssClass: 'selected-star-bold' }; // Bold with glow
+        // this.selectedIcon = { icon: 'fas fa-circle', cssClass: 'selected-dot' }; // Minimal dot
+        // this.selectedIcon = { icon: 'fas fa-trophy', cssClass: 'selected-trophy' }; // Trophy icon
+        // this.selectedIcon = { icon: 'fas fa-award', cssClass: 'selected-award' }; // Award badge
+        
         this.init();
     }
 
@@ -118,6 +134,7 @@ class WebsiteConfig {
         this.updateHeroSection();
         this.updateResearchAreas();
         this.updatePapersSection();
+        this.updateTalksSection();
         this.updateAboutSection();
         this.updateFooter();
         this.updateTalksPage();
@@ -144,7 +161,7 @@ class WebsiteConfig {
             brandText.textContent = this.config.site ? this.config.site.title : this.config.personal.name;
         }
 
-        // Update navigation links
+        // Update desktop navigation links
         const navLinks = document.querySelector('.visible-links');
         if (navLinks && this.config.personal.navigation) {
             navLinks.innerHTML = this.config.personal.navigation.links.map(link => {
@@ -161,6 +178,57 @@ class WebsiteConfig {
                 linkHtml += `>${link.text}</a></li>`;
                 return linkHtml;
             }).join('');
+        }
+
+        // Update mobile navigation links
+        const mobileNavLinks = document.querySelector('.mobile-links');
+        if (mobileNavLinks && this.config.personal.navigation) {
+            mobileNavLinks.innerHTML = this.config.personal.navigation.links.map(link => {
+                let linkHtml = `<li><a href="${link.url}" class="nav-link"`;
+                
+                // Add target and rel attributes if specified
+                if (link.target) {
+                    linkHtml += ` target="${link.target}"`;
+                }
+                if (link.rel) {
+                    linkHtml += ` rel="${link.rel}"`;
+                }
+                
+                linkHtml += `>${link.text}</a></li>`;
+                return linkHtml;
+            }).join('');
+        }
+
+        // Initialize mobile menu toggle
+        this.initMobileMenu();
+    }
+
+    initMobileMenu() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
         }
     }
 
@@ -179,6 +247,12 @@ class WebsiteConfig {
         const publicationsTitle = document.querySelector('.papers-section .section-title');
         if (publicationsTitle && sections.publications) {
             publicationsTitle.textContent = sections.publications;
+        }
+
+        // Update Talks section title
+        const talksTitle = document.querySelector('.talks-section .section-title');
+        if (talksTitle && sections.talks) {
+            talksTitle.textContent = sections.talks;
         }
 
         // Update About Me section title
@@ -295,7 +369,20 @@ class WebsiteConfig {
     updatePapersSection() {
         const papersGrid = document.querySelector('.papers-grid');
         if (papersGrid && this.config.papers && this.config.papers.papers) {
-            papersGrid.innerHTML = this.config.papers.papers.map(paper => `
+            // Get selected and non-selected publications
+            const selectedPapers = this.config.papers.papers.filter(paper => paper.selected);
+            const nonSelectedPapers = this.config.papers.papers.filter(paper => !paper.selected);
+            
+            // Show selected publications first, then fill remaining slots with non-selected
+            const maxPublications = 4;
+            const selectedCount = Math.min(selectedPapers.length, maxPublications);
+            const remainingSlots = maxPublications - selectedCount;
+            const recentNonSelected = nonSelectedPapers.slice(0, remainingSlots);
+            
+            // Combine selected and non-selected publications
+            const displayPapers = [...selectedPapers.slice(0, selectedCount), ...recentNonSelected];
+            
+            papersGrid.innerHTML = displayPapers.map(paper => `
                 <div class="paper-card">
                     <div class="paper-header">
                         <h3 class="paper-title">${paper.title}</h3>
@@ -313,9 +400,61 @@ class WebsiteConfig {
                                 ${link.text}
                             </a>
                         `).join('')}
+                        ${paper.selected ? `<i class="${this.selectedIcon.icon} ${this.selectedIcon.cssClass}" title="Selected Publication"></i>` : ''}
                     </div>
                 </div>
             `).join('');
+            
+            // Add "View All Publications" button if there are more than 4 total publications
+            if (this.config.papers.papers.length > 4) {
+                papersGrid.insertAdjacentHTML('afterend', `
+                    <div class="view-all-container">
+                        <a href="publications.html" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View All Publications
+                        </a>
+                    </div>
+                `);
+            }
+        }
+    }
+
+    updateTalksSection() {
+        const talksGrid = document.querySelector('.talks-grid');
+        if (talksGrid && this.config.talks && this.config.talks.talks) {
+            // Show only the most recent 3 talks on the main page
+            const recentTalks = this.config.talks.talks.slice(0, 3);
+            
+            talksGrid.innerHTML = recentTalks.map(talk => `
+                <div class="talk-card">
+                    <div class="talk-header">
+                        <h3 class="talk-title">${talk.title}</h3>
+                        <span class="talk-date">${talk.date}</span>
+                    </div>
+                    <div class="talk-venue">${talk.venue}</div>
+                    <p class="talk-description">${talk.description}</p>
+                    <div class="talk-links">
+                        ${talk.links.map(link => `
+                            <a href="${link.url}" class="talk-link" target="_blank" rel="noopener noreferrer">
+                                <i class="${link.icon}"></i>
+                                ${link.text}
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add "View All Talks" button if there are more than 3 talks
+            if (this.config.talks.talks.length > 3) {
+                talksGrid.insertAdjacentHTML('afterend', `
+                    <div class="view-all-container">
+                        <a href="talks.html" class="btn btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View All Talks
+                        </a>
+                    </div>
+                `);
+            }
         }
     }
 
@@ -475,6 +614,7 @@ class WebsiteConfig {
                                     ${link.text}
                                 </a>
                             `).join('')}
+                            ${paper.selected ? `<i class="${this.selectedIcon.icon} ${this.selectedIcon.cssClass}" title="Selected Publication"></i>` : ''}
                         </div>
                     </div>
                 `).join('');

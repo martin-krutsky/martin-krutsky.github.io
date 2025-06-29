@@ -4,7 +4,7 @@
   "description": "A collection of my research papers, conference proceedings, and academic contributions to the field of artificial intelligence.",
   "papers": [
     {
-      "title": "Cause is Mechanistic Narrative within Scientific Domains: An Ordinary Language Philosophical Critique of 'Causal Machine Learning'",
+      "title": "\"Cause\" is Mechanistic Narrative within Scientific Domains: An Ordinary Language Philosophical Critique of \"Causal Machine Learning\"",
       "authors": "V. Kungurtsev, L. C. Moore, G. Šír, M. Krutský",
       "venue": "arXiv preprint",
       "year": "2025",
@@ -24,6 +24,7 @@
       "venue": "Master's Thesis, Czech Technical University",
       "year": "2024",
       "type": "Thesis",
+      "selected": true,
       "description": "A contribution to the Geometric Deep Learning framework by studying symmetries in planning problems and implementing symmetry-invariant graph neural network for the Rubik's cube problem. The presented architecture outperforms previous state-of-the-art solutions in cost-to-goal regression experiments and exhibits high interpretability, with explanations based on intrinsic properties being preferable to standard explainer algorithms.",
       "links": [
         {

@@ -7,7 +7,7 @@
   "position": "PhD Student in Artificial Intelligence",
   "buttons": [
     {
-      "text": "Get in Touch",
+      "text": "Get in touch",
       "url": "mailto:Martin.Krutsky@fel.cvut.cz",
       "class": "btn btn-primary",
       "icon": "fas fa-envelope"

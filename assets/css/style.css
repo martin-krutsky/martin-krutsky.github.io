@@ -26,6 +26,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
 }
 
 .masthead__menu {
@@ -41,6 +42,8 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     transition: color 0.3s ease;
+    position: relative;
+    z-index: 1002;
 }
 
 .brand-text {
@@ -74,6 +77,92 @@ body {
     color: #667eea;
     background: rgba(102, 126, 234, 0.1);
     transform: translateY(-1px);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-links {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-links .nav-link {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-links .nav-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+}
+
+/* Hamburger Animation */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -199,7 +288,7 @@ body {
 .previously-at-section {
     margin: 4rem 0;
     max-width: 1200px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 2rem auto;
     padding: 0 2rem;
 }
 
@@ -351,6 +440,8 @@ body {
     transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
     border-left: 4px solid #667eea;
+    display: flex;
+    flex-direction: column;
 }
 
 .paper-card:hover {
@@ -373,6 +464,81 @@ body {
     margin: 0;
     flex: 1;
     line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+/* Star Symbol Options - Choose the one that best matches your design */
+
+/* Option 1: Solid Star (current) */
+.selected-star {
+    color: #ffd700;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    margin-left: auto;
+}
+
+/* Option 2: Outlined Star - More subtle */
+.selected-star-outline {
+    color: #667eea;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    margin-left: auto;
+}
+
+/* Option 3: Gradient Star - Matches your site's gradient theme */
+.selected-star-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    margin-left: auto;
+}
+
+/* Option 4: Subtle Gray Star */
+.selected-star-subtle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-left: auto;
+}
+
+/* Option 5: Bold Star with Border */
+.selected-star-bold {
+    color: #667eea;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+    margin-left: auto;
+}
+
+/* Option 6: Minimal Dot */
+.selected-dot {
+    color: #667eea;
+    font-size: 0.8rem;
+    margin-left: auto;
+    opacity: 0.7;
+}
+
+/* Option 7: Trophy Icon */
+.selected-trophy {
+    color: #ffd700;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    margin-left: auto;
+}
+
+/* Option 8: Award Badge */
+.selected-award {
+    color: #667eea;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    margin-left: auto;
 }
 
 .paper-year {
@@ -412,12 +578,16 @@ body {
     color: #666;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .paper-links {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .paper-link {
@@ -441,10 +611,139 @@ body {
     transform: translateY(-1px);
 }
 
+/* Talks Section */
+.talks-section {
+    margin: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.talk-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    border-left: 4px solid #764ba2;
+    display: flex;
+    flex-direction: column;
+}
+
+.talk-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.talk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.talk-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+    flex: 1;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.talk-date {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.talk-venue {
+    color: #764ba2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.talk-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.talk-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.talk-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    color: #764ba2;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.talk-link:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-all-container .btn {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.view-all-container .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+}
+
 /* About Section */
 .about-section {
     background: #f8f9fa;
-    padding: 4rem 0;
+    padding: 2rem 0;
     margin: 4rem 0 0 0;
 }
 
@@ -465,6 +764,19 @@ body {
     line-height: 1.7;
     color: #555;
     margin-bottom: 1.5rem;
+}
+
+.about-content p a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-content p a:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
 }
 
 /* Modern Footer */
@@ -611,8 +923,17 @@ body {
         height: 150px;
     }
 
+    /* Mobile Navigation */
     .visible-links {
         display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .mobile-menu {
+        display: block;
     }
     
     .paper-header {
@@ -621,6 +942,15 @@ body {
     }
     
     .paper-year {
+        align-self: flex-start;
+    }
+    
+    .talk-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .talk-date {
         align-self: flex-start;
     }
     
@@ -662,6 +992,10 @@ body {
     }
     
     .paper-card {
+        padding: 1.5rem;
+    }
+    
+    .talk-card {
         padding: 1.5rem;
     }
     
