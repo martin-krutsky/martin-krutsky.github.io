@@ -366,6 +366,8 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
 }
 
 .research-card:hover {
@@ -399,12 +401,19 @@ body {
     color: #666;
     line-height: 1.6;
     margin: 0 0 1.5rem 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
+    flex-grow: 1;
 }
 
 .card-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: auto;
 }
 
 .tag {
@@ -562,6 +571,7 @@ body {
     color: #666;
     font-size: 0.95rem;
     margin-bottom: 1rem;
+    font-style: italic;
 }
 
 .paper-type {
@@ -572,6 +582,7 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     border: 1px solid #e9ecef;
+    margin-right: 0.5rem;
 }
 
 .paper-description {
@@ -579,6 +590,11 @@ body {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     flex-grow: 1;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 .paper-links {
@@ -689,6 +705,11 @@ body {
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
     flex-grow: 1;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 .talk-links {
@@ -697,7 +718,7 @@ body {
     flex-wrap: wrap;
     margin-top: auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .talk-link {
@@ -764,6 +785,11 @@ body {
     line-height: 1.7;
     color: #555;
     margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
 }
 
 .about-content p a {

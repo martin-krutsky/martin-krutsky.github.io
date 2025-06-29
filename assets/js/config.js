@@ -390,7 +390,7 @@ class WebsiteConfig {
                     </div>
                     <div class="paper-authors">${paper.authors}</div>
                     <div class="paper-venue">
-                        <span class="paper-type">${paper.type}</span> • ${paper.venue}
+                        <span class="paper-type">${paper.type}</span> ${paper.venue}
                     </div>
                     <p class="paper-description">${paper.description}</p>
                     <div class="paper-links">
@@ -604,7 +604,7 @@ class WebsiteConfig {
                         </div>
                         <div class="publication-authors">${paper.authors}</div>
                         <div class="publication-venue">
-                            <span class="publication-type">${paper.type}</span> • ${paper.venue}
+                            <span class="publication-type">${paper.type}</span> ${paper.venue}
                         </div>
                         <p class="publication-description">${paper.description}</p>
                         <div class="publication-links">
