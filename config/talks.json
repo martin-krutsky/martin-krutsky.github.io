@@ -6,7 +6,7 @@
       "title": "Assessing Explainability for AI Safety Governance",
       "date": "May 27, 2025",
       "venue": "International Conference on Large-Scale AI Risks, KU Leuven, Belgium",
-      "description": "Presented our work on a safety- and governance-informed assessment framework of AI explainability techniques. The proposal, combining AI safety and AI regulation desiderata, was well-received by the interdisciplinary audience of computer scientists, philosophers, lawyers, and policy makers. We proposed a 5-dimensional framework for assessing XAI methods: understandability to subjects and auditors, veracity, actionability, and scalability.",
+      "description": "Presented our work on explainable AI assessment for AI safety governance. We proposed a 5-dimensional framework for evaluating explainable AI methods in safety contexts: understandability to subjects and auditors, veracity, actionability, and scalability. This framework addresses the challenge of specifying and enforcing safety criteria for AI models deployed in complex, dynamic environments. The approach enables stakeholders to react flexibly to emerging safety concerns through meaningful human oversight and technical explainability.",
       "links": [
         {
           "text": "Report",
@@ -24,7 +24,7 @@
       "title": "Dimensions of Explainability in AI Alignment",
       "date": "May 22, 2025",
       "venue": "29th International Student Scientific Conference (POSTER), Prague, Czechia",
-      "description": "Presented a poster on the current outcomes of our collaboration with Paula Gürtler. The work titled 'Dimensions of Explainability in AI Alignment' stood out during the poster session and the subsequent elevator pitch as an original, interdisciplinary proposal. It sparked interest among the conference committee and received positive feedback as an important validation of our efforts.",
+      "description": "Presented our work on human-AI alignment challenges and the role of explainability in continuous oversight. We argued that explainability is essential for bridging the gap between AI systems, governance, and human intervention, given the infeasibility of anticipating all potential misalignment risks. We proposed a structured framework for evaluating explainability methods that moves beyond narrow technical metrics to enhance AI accountability and alignment.",
       "links": [
         {
           "text": "Report",
