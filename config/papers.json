@@ -20,10 +20,10 @@
     },
     {
       "title": "Interpretable Symmetry-Aware Deep Learning for Planning",
-      "authors": "M. Krutský",
-      "venue": "Master's Thesis, Czech Technical University",
+      "authors": "Martin Krutský",
+      "venue": "Czech Technical University",
       "year": "2024",
-      "type": "Thesis",
+      "type": "Master's Thesis",
       "selected": true,
       "description": "A contribution to the Geometric Deep Learning framework by studying symmetries in planning problems and implementing symmetry-invariant graph neural network for the Rubik's cube problem. The presented architecture outperforms previous state-of-the-art solutions in cost-to-goal regression experiments and exhibits high interpretability, with explanations based on intrinsic properties being preferable to standard explainer algorithms.",
       "links": [
@@ -36,10 +36,10 @@
     },
     {
       "title": "Exploring Symmetries in Deep Learning",
-      "authors": "M. Krutský",
-      "venue": "Bachelor's Thesis, Czech Technical University",
+      "authors": "Martin Krutský",
+      "venue": "Czech Technical University",
       "year": "2021",
-      "type": "Thesis",
+      "type": "Bachelor's Thesis",
       "description": "A comprehensive exploration of neural architectures that explicitly exploit domain symmetries, including weight-sharing schemes, convolutions, Deep Sets, and graph neural networks. The work demonstrates that symmetry-aware architectures outperform conventional models on problems exhibiting various symmetries, from simple functions like XOR to complex tasks like combinatorial problems.",
       "links": [
         {

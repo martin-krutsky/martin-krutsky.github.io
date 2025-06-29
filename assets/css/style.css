@@ -46,11 +46,27 @@ body {
     z-index: 1002;
 }
 
+/* Desktop: one gradient across the whole masthead title */
 .brand-text {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
+}
+
+.brand-text .brand-name,
+.brand-text .brand-title {
+    display: inline;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: inherit;
+    background-clip: initial;
+}
+
+/* Desktop: show the separator */
+.brand-text .brand-separator {
+    display: inline;
 }
 
 .visible-links {
@@ -213,7 +229,7 @@ body {
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
@@ -274,6 +290,20 @@ body {
     object-fit: cover;
     border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.8;
+    position: relative;
+}
+
+.profile-image.loading {
+    opacity: 0.7;
+    filter: blur(0.5px);
+}
+
+.profile-image.loaded {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(0);
 }
 
 /* Research Areas */
@@ -970,6 +1000,37 @@ body {
         font-size: 1.2rem;
     }
     
+    /* Responsive brand text */
+    .brand-text {
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: inherit;
+        background-clip: initial;
+        white-space: normal;
+        line-height: 1.20;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .brand-text .brand-name,
+    .brand-text .brand-title {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .brand-text .brand-separator {
+        display: none;
+    }
+    
     .research-grid {
         grid-template-columns: 1fr;
     }
@@ -1058,6 +1119,11 @@ body {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    /* Responsive brand text for very small screens */
+    .brand-text {
+        font-size: 0.9em;
     }
     
     .research-card {

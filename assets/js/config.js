@@ -29,38 +29,43 @@ class WebsiteConfig {
     }
 
     async init() {
-        // Show loading screen immediately
         this.showLoadingScreen();
         
         try {
-            // Load all configuration files in parallel with timeout
+            // Load all configuration files with timeout
             const configPromises = [
                 this.loadConfigWithTimeout('config/site.json', 3000),
                 this.loadConfigWithTimeout('config/personal.json', 3000),
                 this.loadConfigWithTimeout('config/research.json', 3000),
                 this.loadConfigWithTimeout('config/papers.json', 3000),
                 this.loadConfigWithTimeout('config/talks.json', 3000),
-                this.loadConfigWithTimeout('config/social.json', 3000)
+                this.loadConfigWithTimeout('config/social.json', 3000),
+                this.loadConfigWithTimeout('config/version.json', 3000)
             ];
 
-            const [siteConfig, personalConfig, researchConfig, papersConfig, talksConfig, socialConfig] = await Promise.allSettled(configPromises);
-
-            // Handle results, using null for failed loads
-            this.config.site = siteConfig.status === 'fulfilled' ? siteConfig.value : null;
-            this.config.personal = personalConfig.status === 'fulfilled' ? personalConfig.value : null;
-            this.config.research = researchConfig.status === 'fulfilled' ? researchConfig.value : null;
-            this.config.papers = papersConfig.status === 'fulfilled' ? papersConfig.value : null;
-            this.config.talks = talksConfig.status === 'fulfilled' ? talksConfig.value : null;
-            this.config.social = socialConfig.status === 'fulfilled' ? socialConfig.value : null;
-
-            // Populate content even if some configs failed
-            this.populateContent();
+            const results = await Promise.allSettled(configPromises);
             
-            // Hide loading screen with smooth transition
-            this.hideLoadingScreen();
+            // Process results and build config object
+            results.forEach((result, index) => {
+                if (result.status === 'fulfilled') {
+                    const configName = ['site', 'personal', 'research', 'papers', 'talks', 'social', 'version'][index];
+                    this.config[configName] = result.value;
+                } else {
+                    console.warn(`Failed to load config ${index}:`, result.reason);
+                }
+            });
+
+            // Use requestAnimationFrame for smooth rendering
+            requestAnimationFrame(() => {
+                this.populateContent();
+                this.hideLoadingScreen();
+            });
+
+            // Initialize progressive image loading
+            this.initProgressiveImageLoading();
+
         } catch (error) {
-            console.error('Error loading configuration:', error);
-            this.hideLoadingScreen();
+            console.error('Error during initialization:', error);
             this.showErrorState();
         }
     }
@@ -187,10 +192,27 @@ class WebsiteConfig {
     updateNavigation() {
         if (!this.config.personal) return;
 
-        // Update brand text
+        // Update brand text with responsive structure
         const brandText = document.querySelector('.brand-text');
         if (brandText) {
-            brandText.textContent = this.config.site ? this.config.site.title : this.config.personal.name;
+            const fullTitle = this.config.site ? this.config.site.title : this.config.personal.name;
+            
+            // Create responsive brand text structure
+            if (fullTitle.includes("—")) {
+                // Split by the em dash and create responsive structure
+                const parts = fullTitle.split("—");
+                const name = parts[0].trim();
+                const title = parts[1].trim();
+                
+                brandText.innerHTML = `
+                    <span class="brand-name">${name}</span>
+                    <span class="brand-separator">—</span>
+                    <span class="brand-title">${title}</span>
+                `;
+            } else {
+                // Fallback to original text if no em dash found
+                brandText.textContent = fullTitle;
+            }
         }
 
         // Update desktop navigation links
@@ -671,6 +693,120 @@ class WebsiteConfig {
                 </a>
             `).join('');
         }
+    }
+
+    initProgressiveImageLoading() {
+        const profileImage = document.querySelector('.profile-image');
+        if (!profileImage || !profileImage.dataset.fullSrc) return;
+
+        const fullSrc = profileImage.dataset.fullSrc;
+        
+        // Try to load a pre-created thumbnail first, fallback to client-side compression
+        const thumbnailSrc = fullSrc.replace('profile-cropped.jpg', 'profile-thumbnail.jpg');
+        
+        // Check if thumbnail exists
+        fetch(thumbnailSrc, { method: 'HEAD' })
+            .then(response => {
+                if (response.ok) {
+                    // Use pre-created thumbnail
+                    this.loadWithThumbnail(profileImage, thumbnailSrc, fullSrc);
+                } else {
+                    // Fallback to client-side compression
+                    this.loadWithClientCompression(profileImage, fullSrc);
+                }
+            })
+            .catch(() => {
+                // Fallback to client-side compression
+                this.loadWithClientCompression(profileImage, fullSrc);
+            });
+    }
+
+    loadWithThumbnail(profileImage, thumbnailSrc, fullSrc) {
+        // Set the thumbnail as initial source
+        profileImage.src = thumbnailSrc;
+        profileImage.classList.add('loading');
+        
+        // Load the full-quality image in the background
+        const fullImage = new Image();
+        fullImage.onload = () => {
+            profileImage.src = fullSrc;
+            profileImage.classList.remove('loading');
+            profileImage.classList.add('loaded');
+        };
+        fullImage.onerror = () => {
+            console.warn('Failed to load full-quality profile image');
+            profileImage.classList.remove('loading');
+        };
+        fullImage.src = fullSrc;
+    }
+
+    loadWithClientCompression(profileImage, fullSrc) {
+        // Create a compressed version using canvas (client-side compression)
+        this.createCompressedThumbnail(fullSrc, 100, 100, 0.6).then(compressedDataUrl => {
+            // Set the compressed version as initial source
+            profileImage.src = compressedDataUrl;
+            profileImage.classList.add('loading');
+            
+            // Load the full-quality image in the background
+            const fullImage = new Image();
+            fullImage.onload = () => {
+                // Replace with full-quality image when loaded
+                profileImage.src = fullSrc;
+                profileImage.classList.remove('loading');
+                profileImage.classList.add('loaded');
+            };
+            fullImage.onerror = () => {
+                console.warn('Failed to load full-quality profile image');
+                profileImage.classList.remove('loading');
+            };
+            fullImage.src = fullSrc;
+        }).catch(error => {
+            console.warn('Failed to create compressed thumbnail:', error);
+            // Fallback to original image
+            profileImage.classList.remove('loading');
+        });
+    }
+
+    async createCompressedThumbnail(src, maxWidth, maxHeight, quality = 0.8) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Calculate new dimensions
+                let { width, height } = img;
+                if (width > height) {
+                    if (width > maxWidth) {
+                        height = (height * maxWidth) / width;
+                        width = maxWidth;
+                    }
+                } else {
+                    if (height > maxHeight) {
+                        width = (width * maxHeight) / height;
+                        height = maxHeight;
+                    }
+                }
+                
+                canvas.width = width;
+                canvas.height = height;
+                
+                // Draw and compress
+                ctx.drawImage(img, 0, 0, width, height);
+                
+                try {
+                    const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+                    resolve(compressedDataUrl);
+                } catch (error) {
+                    reject(error);
+                }
+            };
+            
+            img.onerror = reject;
+            img.src = src;
+        });
     }
 }
 
