@@ -7,7 +7,7 @@
       "authors": "M. Krutský, J. Němeček, P. Gürtler, J. Peleška, G. Šír",
       "date": "May 27, 2025",
       "venue": "International Conference on Large-Scale AI Risks, KU Leuven, Belgium",
-      "tags": ["conference"],
+      "tags": ["Conference"],
       "description": "Presented our work on explainable AI assessment for AI safety governance. We proposed a 5-dimensional framework for evaluating explainable AI methods in safety contexts: understandability to subjects and auditors, veracity, actionability, and scalability. This framework addresses the challenge of specifying and enforcing safety criteria for AI models deployed in complex, dynamic environments. The approach enables stakeholders to react flexibly to emerging safety concerns through meaningful human oversight and technical explainability.",
       "links": [
         {
@@ -27,7 +27,7 @@
       "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler",
       "date": "May 22, 2025",
       "venue": "29th International Student Scientific Conference (POSTER), Prague, Czechia",
-      "tags": ["conference", "poster"],
+      "tags": ["Conference", "Poster"],
       "description": "Presented our work on human-AI alignment challenges and the role of explainability in continuous oversight. We argued that explainability is essential for bridging the gap between AI systems, governance, and human intervention, given the infeasibility of anticipating all potential misalignment risks. We proposed a structured framework for evaluating explainability methods that moves beyond narrow technical metrics to enhance AI accountability and alignment.",
       "links": [
         {
@@ -47,7 +47,7 @@
       "authors": "J. Němeček, M. Krutský",
       "date": "October 18, 2024",
       "venue": "AI 4 ALL at AI Days 2024, Prague, Czechia",
-      "tags": ["public talk", "education"],
+      "tags": ["Public Talk", "Education"],
       "description": "Gave two talks on the ethics of AI from the perspective of technical researchers and developers. The first talk was tailored to high school students in the morning, and the second talk was aimed at the general public in the late afternoon. Topics covered included AI alignment, RLHF, jailbreaking, constitutional AI, and measuring ethics and morality in LLMs.",
       "links": [
         {
@@ -62,7 +62,7 @@
       "authors": "M. Krutský",
       "date": "November 3, 2023",
       "venue": "Seminar for AI Days 2023, Prague, Czechia",
-      "tags": ["public lecture"],
+      "tags": ["Public Lecture"],
       "description": "Organized and presented at a seminar mapping the landscape of Responsible AI projects in Prague. More than 50 people concerned with the responsible development of AI technologies attended to listen and discuss the many different societal impacts of AI. The talk covered the definition of Responsible AI, mapping of RAI efforts in Prague, and the relationship between AI ethics and AI safety.",
       "links": [
         {

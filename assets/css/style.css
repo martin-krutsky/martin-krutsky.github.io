@@ -402,11 +402,17 @@ body {
     line-height: 1.6;
     margin: 0 0 1.5rem 0;
     text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     word-break: break-word;
     flex-grow: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    word-spacing: 0.05em;
+    letter-spacing: normal;
 }
 
 .card-tags {
@@ -591,10 +597,16 @@ body {
     margin-bottom: 1.5rem;
     flex-grow: 1;
     text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     word-break: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    word-spacing: 0.05em;
+    letter-spacing: normal;
 }
 
 .paper-links {
@@ -729,10 +741,16 @@ body {
     font-size: 0.95rem;
     flex-grow: 1;
     text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     word-break: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    word-spacing: 0.05em;
+    letter-spacing: normal;
 }
 
 .talk-links {
@@ -809,10 +827,16 @@ body {
     color: #555;
     margin-bottom: 1.5rem;
     text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     word-break: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    word-spacing: 0.05em;
+    letter-spacing: normal;
 }
 
 .about-content p a {
