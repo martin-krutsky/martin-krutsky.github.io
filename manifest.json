@@ -1,0 +1,21 @@
+{
+  "name": "Martin Krutsky - Personal Website",
+  "short_name": "Martin Krutsky",
+  "description": "Personal website of Martin Krutsky - AI Researcher and Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/profile-cropped.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+} 

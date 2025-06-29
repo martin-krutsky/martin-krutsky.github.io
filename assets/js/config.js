@@ -29,70 +29,96 @@ class WebsiteConfig {
     }
 
     async init() {
-        // Add loading state to prevent flash of unstyled content
-        this.addLoadingState();
+        // Show loading screen immediately
+        this.showLoadingScreen();
         
         try {
-            // Load all configuration files in parallel
-            const [siteConfig, personalConfig, researchConfig, papersConfig, talksConfig, socialConfig] = await Promise.all([
-                this.loadConfig('config/site.json'),
-                this.loadConfig('config/personal.json'),
-                this.loadConfig('config/research.json'),
-                this.loadConfig('config/papers.json'),
-                this.loadConfig('config/talks.json'),
-                this.loadConfig('config/social.json')
-            ]);
+            // Load all configuration files in parallel with timeout
+            const configPromises = [
+                this.loadConfigWithTimeout('config/site.json', 3000),
+                this.loadConfigWithTimeout('config/personal.json', 3000),
+                this.loadConfigWithTimeout('config/research.json', 3000),
+                this.loadConfigWithTimeout('config/papers.json', 3000),
+                this.loadConfigWithTimeout('config/talks.json', 3000),
+                this.loadConfigWithTimeout('config/social.json', 3000)
+            ];
 
-            this.config.site = siteConfig;
-            this.config.personal = personalConfig;
-            this.config.research = researchConfig;
-            this.config.papers = papersConfig;
-            this.config.talks = talksConfig;
-            this.config.social = socialConfig;
+            const [siteConfig, personalConfig, researchConfig, papersConfig, talksConfig, socialConfig] = await Promise.allSettled(configPromises);
 
+            // Handle results, using null for failed loads
+            this.config.site = siteConfig.status === 'fulfilled' ? siteConfig.value : null;
+            this.config.personal = personalConfig.status === 'fulfilled' ? personalConfig.value : null;
+            this.config.research = researchConfig.status === 'fulfilled' ? researchConfig.value : null;
+            this.config.papers = papersConfig.status === 'fulfilled' ? papersConfig.value : null;
+            this.config.talks = talksConfig.status === 'fulfilled' ? talksConfig.value : null;
+            this.config.social = socialConfig.status === 'fulfilled' ? socialConfig.value : null;
+
+            // Populate content even if some configs failed
             this.populateContent();
-            this.removeLoadingState();
+            
+            // Hide loading screen with smooth transition
+            this.hideLoadingScreen();
         } catch (error) {
             console.error('Error loading configuration:', error);
-            this.removeLoadingState();
+            this.hideLoadingScreen();
             this.showErrorState();
         }
     }
 
-    addLoadingState() {
-        // Add a subtle loading indicator
-        const style = document.createElement('style');
-        style.id = 'loading-style';
-        style.textContent = `
-            .loading-content {
-                opacity: 0.3;
-                transition: opacity 0.3s ease;
-            }
-            .loading-content.loaded {
-                opacity: 1;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Add loading class to main content areas
-        const contentAreas = document.querySelectorAll('.hero-section, .research-areas, .papers-section, .about-section, .modern-footer, .talks-section, .previously-at-section');
-        contentAreas.forEach(area => {
-            area.classList.add('loading-content');
-        });
+    showLoadingScreen() {
+        const loadingScreen = document.getElementById('loadingScreen');
+        const contentWrapper = document.getElementById('contentWrapper');
+        
+        if (loadingScreen) {
+            loadingScreen.classList.remove('hidden');
+        }
+        
+        if (contentWrapper) {
+            contentWrapper.classList.remove('loaded');
+        }
     }
 
-    removeLoadingState() {
-        // Remove loading styles
-        const loadingStyle = document.getElementById('loading-style');
-        if (loadingStyle) {
-            loadingStyle.remove();
+    hideLoadingScreen() {
+        const loadingScreen = document.getElementById('loadingScreen');
+        const contentWrapper = document.getElementById('contentWrapper');
+        
+        // Add loaded class to content wrapper
+        if (contentWrapper) {
+            contentWrapper.classList.add('loaded');
         }
+        
+        // Hide loading screen after a short delay to ensure content is ready
+        setTimeout(() => {
+            if (loadingScreen) {
+                loadingScreen.classList.add('hidden');
+            }
+        }, 100);
+    }
 
-        // Add loaded class to content areas
-        const contentAreas = document.querySelectorAll('.loading-content');
-        contentAreas.forEach(area => {
-            area.classList.add('loaded');
-        });
+    async loadConfigWithTimeout(path, timeoutMs) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+        
+        try {
+            const response = await fetch(path, { 
+                signal: controller.signal,
+                cache: 'force-cache' // Use cached version if available
+            });
+            clearTimeout(timeoutId);
+            
+            if (!response.ok) {
+                throw new Error(`Failed to load ${path}: ${response.status}`);
+            }
+            return await response.json();
+        } catch (error) {
+            clearTimeout(timeoutId);
+            if (error.name === 'AbortError') {
+                console.warn(`Timeout loading ${path}`);
+            } else {
+                console.error(`Error loading ${path}:`, error);
+            }
+            return null;
+        }
     }
 
     showErrorState() {
@@ -109,37 +135,43 @@ class WebsiteConfig {
             border-radius: 0.5rem;
             color: #c33;
             z-index: 1000;
+            max-width: 400px;
+            text-align: center;
         `;
-        errorDiv.textContent = 'Failed to load site content. Please refresh the page.';
+        errorDiv.innerHTML = `
+            <h3>Loading Error</h3>
+            <p>Some content failed to load. Please refresh the page or try again later.</p>
+            <button onclick="location.reload()" style="
+                background: #c33;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                margin-top: 1rem;
+            ">Refresh Page</button>
+        `;
         document.body.appendChild(errorDiv);
     }
 
-    async loadConfig(path) {
-        try {
-            const response = await fetch(path);
-            if (!response.ok) {
-                throw new Error(`Failed to load ${path}: ${response.status}`);
-            }
-            return await response.json();
-        } catch (error) {
-            console.error(`Error loading ${path}:`, error);
-            return null;
-        }
-    }
-
     populateContent() {
+        // Populate content in order of visual importance
         this.updatePageTitle();
         this.updateNavigation();
         this.updateSectionTitles();
         this.updateHeroSection();
-        this.updateResearchAreas();
-        this.updatePapersSection();
-        this.updateTalksSection();
-        this.updateAboutSection();
-        this.updateFooter();
-        this.updateTalksPage();
-        this.updatePublicationsPage();
-        this.updatePreviouslyAtSection();
+        
+        // Use requestAnimationFrame for smooth rendering
+        requestAnimationFrame(() => {
+            this.updateResearchAreas();
+            this.updatePapersSection();
+            this.updateTalksSection();
+            this.updateAboutSection();
+            this.updateFooter();
+            this.updateTalksPage();
+            this.updatePublicationsPage();
+            this.updatePreviouslyAtSection();
+        });
     }
 
     updatePageTitle() {
