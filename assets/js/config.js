@@ -61,9 +61,6 @@ class WebsiteConfig {
                 this.hideLoadingScreen();
             });
 
-            // Initialize progressive image loading
-            this.initProgressiveImageLoading();
-
         } catch (error) {
             console.error('Error during initialization:', error);
             this.showErrorState();
@@ -693,120 +690,6 @@ class WebsiteConfig {
                 </a>
             `).join('');
         }
-    }
-
-    initProgressiveImageLoading() {
-        const profileImage = document.querySelector('.profile-image');
-        if (!profileImage || !profileImage.dataset.fullSrc) return;
-
-        const fullSrc = profileImage.dataset.fullSrc;
-        
-        // Try to load a pre-created thumbnail first, fallback to client-side compression
-        const thumbnailSrc = fullSrc.replace('profile-cropped.jpg', 'profile-thumbnail.jpg');
-        
-        // Check if thumbnail exists
-        fetch(thumbnailSrc, { method: 'HEAD' })
-            .then(response => {
-                if (response.ok) {
-                    // Use pre-created thumbnail
-                    this.loadWithThumbnail(profileImage, thumbnailSrc, fullSrc);
-                } else {
-                    // Fallback to client-side compression
-                    this.loadWithClientCompression(profileImage, fullSrc);
-                }
-            })
-            .catch(() => {
-                // Fallback to client-side compression
-                this.loadWithClientCompression(profileImage, fullSrc);
-            });
-    }
-
-    loadWithThumbnail(profileImage, thumbnailSrc, fullSrc) {
-        // Set the thumbnail as initial source
-        profileImage.src = thumbnailSrc;
-        profileImage.classList.add('loading');
-        
-        // Load the full-quality image in the background
-        const fullImage = new Image();
-        fullImage.onload = () => {
-            profileImage.src = fullSrc;
-            profileImage.classList.remove('loading');
-            profileImage.classList.add('loaded');
-        };
-        fullImage.onerror = () => {
-            console.warn('Failed to load full-quality profile image');
-            profileImage.classList.remove('loading');
-        };
-        fullImage.src = fullSrc;
-    }
-
-    loadWithClientCompression(profileImage, fullSrc) {
-        // Create a compressed version using canvas (client-side compression)
-        this.createCompressedThumbnail(fullSrc, 100, 100, 0.6).then(compressedDataUrl => {
-            // Set the compressed version as initial source
-            profileImage.src = compressedDataUrl;
-            profileImage.classList.add('loading');
-            
-            // Load the full-quality image in the background
-            const fullImage = new Image();
-            fullImage.onload = () => {
-                // Replace with full-quality image when loaded
-                profileImage.src = fullSrc;
-                profileImage.classList.remove('loading');
-                profileImage.classList.add('loaded');
-            };
-            fullImage.onerror = () => {
-                console.warn('Failed to load full-quality profile image');
-                profileImage.classList.remove('loading');
-            };
-            fullImage.src = fullSrc;
-        }).catch(error => {
-            console.warn('Failed to create compressed thumbnail:', error);
-            // Fallback to original image
-            profileImage.classList.remove('loading');
-        });
-    }
-
-    async createCompressedThumbnail(src, maxWidth, maxHeight, quality = 0.8) {
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.crossOrigin = 'anonymous';
-            
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                
-                // Calculate new dimensions
-                let { width, height } = img;
-                if (width > height) {
-                    if (width > maxWidth) {
-                        height = (height * maxWidth) / width;
-                        width = maxWidth;
-                    }
-                } else {
-                    if (height > maxHeight) {
-                        width = (width * maxHeight) / height;
-                        height = maxHeight;
-                    }
-                }
-                
-                canvas.width = width;
-                canvas.height = height;
-                
-                // Draw and compress
-                ctx.drawImage(img, 0, 0, width, height);
-                
-                try {
-                    const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
-                    resolve(compressedDataUrl);
-                } catch (error) {
-                    reject(error);
-                }
-            };
-            
-            img.onerror = reject;
-            img.src = src;
-        });
     }
 }
 
