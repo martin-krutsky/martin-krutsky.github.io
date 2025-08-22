@@ -4,6 +4,41 @@
   "description": "A collection of my research papers, conference proceedings, and other academic contributions to the field of artificial intelligence.",
   "papers": [
     {
+      "title": "Binarizing Physics-Inspired GNNs for Combinatorial Optimization",
+      "authors": "M. Krutský, G. Šír, V. Kungurtsev, G. Korpas",
+      "venue": "European Conference on Artificial Intelligence (ECAI)",
+      "year": "2025",
+      "type": "Conference",
+      "selected": true,
+      "description": "Building on insights from fuzzy logic and binarized neural networks, we developed methods that significantly improve the performance of Physics-inspired graph neural networks (PI-GNNs) on dense combinatorial optimization problems. Our research found that PI-GNNs struggle with denser problems due to their dependency on phase transition during training. We resolved the issue by informing the network about the relaxation of the underlying binary problem, adjusting the activation function and the loss.",
+      "links": [
+        {
+          "text": "Proceedings",
+          "icon": "fas fa-newspaper",
+          "url": "#"
+        },
+        {
+          "text": "arXiv",
+          "icon": "ai ai-arxiv",
+          "url": "https://arxiv.org/abs/2507.13703"
+        }
+      ]
+    },{
+      "title": "Geometric Deep Learning for the Rubik's Cube Group",
+      "authors": "M. Krutský and G. Šír",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "year": "2025",
+      "type": "Journal",
+      "selected": true,
+      "description": "A novel deep learning approach leverages the Rubik's Cube's inherent symmetries to solve it efficiently. By thoroughly analyzing the problem's group-theoretical properties, we developed a symmetry-invariant neural architecture with graph convolutional layers that significantly compresses the cube's vast state space. This new architecture demonstrates superior performance, enhanced generalization, and improved problem-solving abilities compared to previous state-of-the-art results.",
+      "links": [
+        {
+          "text": "IEEE TNNLS",
+          "icon": "ai ai-ieee",
+          "url": "https://doi.org/10.1109/TNNLS.2025.3599009"
+        }
+      ]
+    },{
       "title": "\"Cause\" is Mechanistic Narrative within Scientific Domains: An Ordinary Language Philosophical Critique of \"Causal Machine Learning\"",
       "authors": "V. Kungurtsev, L. C. Moore, G. Šír, M. Krutský",
       "venue": "arXiv preprint",
@@ -13,7 +48,7 @@
       "links": [
         {
           "text": "arXiv",
-          "icon": "ai ai-arxiv",
+          "icon": "ai ai-arxiv-square",
           "url": "https://arxiv.org/abs/2501.05844"
         }
       ]
@@ -24,7 +59,6 @@
       "venue": "Czech Technical University",
       "year": "2024",
       "type": "Master's Thesis",
-      "selected": true,
       "description": "A contribution to the Geometric Deep Learning framework by studying symmetries in planning problems and implementing symmetry-invariant graph neural network for the Rubik's cube problem. The presented architecture outperforms previous state-of-the-art solutions in cost-to-goal regression experiments and exhibits high interpretability, with explanations based on intrinsic properties being preferable to standard explainer algorithms.",
       "links": [
         {
