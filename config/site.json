@@ -1,6 +1,6 @@
 {
   "title": "Martin Krutský — AI Researcher",
-  "description": "PhD student in artificial intelligence focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
+  "description": "PhD student in artificial intelligence focusing on neurosymbolic interpretability, responsible AI, and geometric deep learning",
   "sections": {
     "areasOfExpertise": "Areas of Expertise",
     "publications": "Selected Publications",
@@ -10,10 +10,10 @@
   },
   "person": {
     "title": "PhD Student in Artificial Intelligence",
-    "subtitle": "Focusing on neuro-symbolic interpretability, GNNs, and geometric deep learning",
+    "subtitle": "Focusing on neurosymbolic interpretability, responsible AI, and geometric deep learning",
     "description": "Exploring the intersection of deep learning, structured knowledge, mechanistic interpretability, and symbolic approaches to extraction of understandable concepts from AI systems. Studying responsible approaches to AI development.",
     "about": [
-      "I am a PhD student at the <a href=\"https://ida.fel.cvut.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Intelligent Data Analysis Lab</a>, <a href=\"https://fel.cvut.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Faculty of Electrical Engineering</a> at the <a href=\"https://cvut.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Czech Technical University</a> in Prague, supervised by <a href=\"https://gustiks.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Gustav Šír</a>. My research focuses on neuro-symbolic interpretability, graph neural networks, and geometric deep learning, all aimed at creating more trustworthy AI systems. Previously, I studied the expressivity of GNNs, as well as symmetry-invariant deep learning.",
+      "I am a PhD student at the <a href=\"https://ida.fel.cvut.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Intelligent Data Analysis Lab</a>, <a href=\"https://fel.cvut.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Faculty of Electrical Engineering</a> at the <a href=\"https://cvut.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Czech Technical University</a> in Prague, supervised by <a href=\"https://gustiks.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">Gustav Šír</a>. My research focuses on neurosymbolic interpretability, graph neural networks, and geometric deep learning, all aimed at creating more trustworthy AI systems. Previously, I studied the expressivity of GNNs, as well as symmetry-invariant deep learning.",
       "I am passionate about developing AI in a more responsible way. At our department, we've started <a href=\"https://rai.fel.cvut.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">an initiative</a> organizing talks and discussions on Responsible AI, covering topics from AI ethics and fairness to AI safety and alignment. Recently, we also began our own research agenda, tackling the problem of evaluating explainable AI techniques from human and regulatory perspectives.",
       "Beyond research, I also develop practical AI solutions, including those based on LLMs (RAG, agents, evals) and classical machine learning algorithms.",
       "In 2024, I received a master's degree in artificial intelligence from the Czech Technical University. In 2021, I graduated from the <a href=\"https://prg.ai/en/minor/\" target=\"_blank\" rel=\"noopener noreferrer\">prg.ai Minor program</a>, completing interdisciplinary AI courses across Prague universities. I am currently serving as the president of the <a href=\"http://www.upe.cvut.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Czech Alpha Chapter</a> of <a href=\"http://www.upe.acm.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Upsilon Pi Epsilon (UPE)</a>."
