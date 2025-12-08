@@ -3,6 +3,41 @@
   "description": "A collection of my presentations, talks, and speaking engagements at conferences, workshops, and public events.",
   "talks": [
     {
+      "title": "When AI Slanders Us & Evaluating Explanations",
+      "authors": "M. Krutský, J. Němeček, J. Peleška",
+      "date": "October 6–7, 2025",
+      "venue": "Multiple events at AI Days 2025, Prague",
+      "tags": ["Public Talk", "Education", "Forum"],
+      "description": "Gave several presentations during AI Days 2025 focused on high-risk AI decisions and explainability. Led two interactive session for high-school students using a mock online-proctoring scenario to explore trust in AI decisions. Concluded with a research-oriented talk at the Young AI Research Forum on the importance of explainability for fairness and accountability.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/ai_days_25/"
+        }
+      ]
+    },
+    {
+      "title": "XAI Desiderata for Trustworthy AI: Insights from the AI Act",
+      "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler, G. Šír",
+      "date": "October 26, 2025",
+      "venue": "The European Workshop on Trustworthy AI (ECAI 2025), Bologna",
+      "tags": ["Workshop", "Talk"],
+      "description": "We presented a governance-aligned framework for evaluating explainable-AI methods, drawing on key desiderata from recent XAI research. The framework assesses explanation techniques along dimensions such as stakeholder understandability, faithfulness, verifiability, actionability, and scalability. By linking these criteria to practical oversight and audit needs, including those emerging under the EU AI Act, the approach helps institutions select XAI methods that integrate effectively into organizational decision processes and compliance workflows.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/conferences/ecai_trust_ai_workshop/"
+        },
+        {
+          "text": "Preprint",
+          "icon": "fas fa-newspaper",
+          "url": "https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf"
+        }
+      ]
+    },
+    {
       "title": "Assessing Explainability for AI Safety Governance",
       "authors": "M. Krutský, J. Němeček, P. Gürtler, J. Peleška, G. Šír",
       "date": "May 27, 2025",
@@ -13,7 +48,7 @@
         {
           "text": "Report",
           "icon": "fas fa-file-alt",
-          "url": "https://rai.fel.cvut.cz/conferences/leuven/2025/05/27/leuven-risk/index.html"
+          "url": "https://rai.fel.cvut.cz/conferences/leuven-risk/"
         },
         {
           "text": "Book of abstracts",
@@ -33,7 +68,7 @@
         {
           "text": "Report",
           "icon": "fas fa-file-alt",
-          "url": "https://rai.fel.cvut.cz/conferences/prague/2025/05/22/poster-xai-alignment/index.html"
+          "url": "https://rai.fel.cvut.cz/conferences/poster-xai-alignment/"
         },
         {
           "text": "Proceedings",
@@ -53,7 +88,7 @@
         {
           "text": "Report",
           "icon": "fas fa-file-alt",
-          "url": "https://rai.fel.cvut.cz/events/prague/2024/10/18/aidev-ethics-talk-report/index.html"
+          "url": "https://rai.fel.cvut.cz/events/aidev-ethics-talk-report/"
         }
       ]
     },
@@ -68,7 +103,7 @@
         {
           "text": "Report",
           "icon": "fas fa-file-alt",
-          "url": "https://rai.fel.cvut.cz/events/prague/2023/11/03/rai-talk-report/index.html"
+          "url": "https://rai.fel.cvut.cz/events/rai-talk-report/"
         }
       ]
     }

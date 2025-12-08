@@ -9,7 +9,7 @@
     "talks": "Talks"
   },
   "person": {
-    "title": "PhD Student in Artificial Intelligence",
+    "title": "PhD Student in AI @ IDA FEE CTU",
     "subtitle": "Focusing on neurosymbolic interpretability, responsible AI, and geometric deep learning",
     "description": "Exploring the intersection of deep learning, structured knowledge, mechanistic interpretability, and symbolic approaches to extraction of understandable concepts from AI systems. Studying responsible approaches to AI development.",
     "about": [
@@ -19,4 +19,4 @@
       "In 2024, I received a master's degree in artificial intelligence from the Czech Technical University. In 2021, I graduated from the <a href=\"https://prg.ai/en/minor/\" target=\"_blank\" rel=\"noopener noreferrer\">prg.ai Minor program</a>, completing interdisciplinary AI courses across Prague universities. I am currently serving as the president of the <a href=\"http://www.upe.cvut.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Czech Alpha Chapter</a> of <a href=\"http://www.upe.acm.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Upsilon Pi Epsilon (UPE)</a>."
     ]
   }
-} 
+}
