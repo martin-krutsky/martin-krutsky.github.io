@@ -1,30 +1,33 @@
 {
   "name": "Martin Krutský",
-  "email": "Martin.Krutsky@fel.cvut.cz",
-  "location": "Prague, Czech Republic",
-  "institution": "Czech Technical University in Prague",
-  "department": "Intelligent Data Analysis Lab",
-  "position": "PhD Student in Artificial Intelligence",
   "buttons": [
     {
-      "text": "Get in touch",
+      "text": "Email",
       "url": "mailto:Martin.Krutsky@fel.cvut.cz",
-      "class": "btn btn-primary",
+      "class": "btn-icon",
       "icon": "fas fa-envelope"
     },
     {
-      "text": "Download CV",
-      "url": "assets/files/cv.pdf",
-      "class": "btn btn-secondary",
-      "icon": "fas fa-download",
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/martin-krutsky",
+      "class": "btn-icon",
+      "icon": "fab fa-linkedin",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "text": "IDA FEE CTU",
+      "url": "https://ida.fel.cvut.cz/",
+      "class": "btn-icon",
+      "image": "assets/images/logos/ida-logo.png",
       "target": "_blank",
       "rel": "noopener noreferrer"
     },
     {
       "text": "Responsible AI",
       "url": "https://rai.fel.cvut.cz/",
-      "class": "btn btn-tertiary",
-      "icon": "fas fa-external-link-alt",
+      "class": "btn-icon",
+      "image": "assets/images/logos/rai-logo.png",
       "target": "_blank",
       "rel": "noopener noreferrer"
     }
@@ -45,7 +48,7 @@
       "icon": "fab fa-github"
     },
     "linkedin": {
-      "platform": "LinkedIn", 
+      "platform": "LinkedIn",
       "url": "https://www.linkedin.com/in/martin-krutsky",
       "icon": "fab fa-linkedin"
     },
@@ -76,7 +79,7 @@
         "url": "talks.html"
       },
       {
-        "text": "CV",
+        "text": "Download CV",
         "url": "assets/files/cv.pdf",
         "target": "_blank",
         "rel": "noopener noreferrer"
@@ -116,4 +119,4 @@
     "text": "© 2025 Martin Krutský. All rights reserved.",
     "poweredBy": "Powered by GitHub Pages"
   }
-} 
+}

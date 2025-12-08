@@ -9,13 +9,13 @@ class WebsiteConfig {
             talks: null,
             social: null
         };
-        
+
         // Star symbol options - change this to test different styles
         this.selectedIcon = {
             icon: 'fas fa-star', // Font Awesome icon class
             cssClass: 'selected-star-gradient' // CSS class for styling
         };
-        
+
         // Available options (uncomment the one you prefer):
         // this.selectedIcon = { icon: 'far fa-star', cssClass: 'selected-star-outline' }; // Outlined star
         // this.selectedIcon = { icon: 'fas fa-star', cssClass: 'selected-star-gradient' }; // Gradient star
@@ -24,13 +24,13 @@ class WebsiteConfig {
         // this.selectedIcon = { icon: 'fas fa-circle', cssClass: 'selected-dot' }; // Minimal dot
         // this.selectedIcon = { icon: 'fas fa-trophy', cssClass: 'selected-trophy' }; // Trophy icon
         // this.selectedIcon = { icon: 'fas fa-award', cssClass: 'selected-award' }; // Award badge
-        
+
         this.init();
     }
 
     async init() {
         this.showLoadingScreen();
-        
+
         try {
             // Load all configuration files with timeout
             const configPromises = [
@@ -44,7 +44,7 @@ class WebsiteConfig {
             ];
 
             const results = await Promise.allSettled(configPromises);
-            
+
             // Process results and build config object
             results.forEach((result, index) => {
                 if (result.status === 'fulfilled') {
@@ -70,11 +70,11 @@ class WebsiteConfig {
     showLoadingScreen() {
         const loadingScreen = document.getElementById('loadingScreen');
         const contentWrapper = document.getElementById('contentWrapper');
-        
+
         if (loadingScreen) {
             loadingScreen.classList.remove('hidden');
         }
-        
+
         if (contentWrapper) {
             contentWrapper.classList.remove('loaded');
         }
@@ -83,12 +83,12 @@ class WebsiteConfig {
     hideLoadingScreen() {
         const loadingScreen = document.getElementById('loadingScreen');
         const contentWrapper = document.getElementById('contentWrapper');
-        
+
         // Add loaded class to content wrapper
         if (contentWrapper) {
             contentWrapper.classList.add('loaded');
         }
-        
+
         // Hide loading screen after a short delay to ensure content is ready
         setTimeout(() => {
             if (loadingScreen) {
@@ -100,14 +100,14 @@ class WebsiteConfig {
     async loadConfigWithTimeout(path, timeoutMs) {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-        
+
         try {
-            const response = await fetch(path, { 
+            const response = await fetch(path, {
                 signal: controller.signal,
                 cache: 'default' // Let the service worker handle caching
             });
             clearTimeout(timeoutId);
-            
+
             if (!response.ok) {
                 throw new Error(`Failed to load ${path}: ${response.status}`);
             }
@@ -162,7 +162,7 @@ class WebsiteConfig {
         this.updateNavigation();
         this.updateSectionTitles();
         this.updateHeroSection();
-        
+
         // Use requestAnimationFrame for smooth rendering
         requestAnimationFrame(() => {
             this.updateResearchAreas();
@@ -193,14 +193,14 @@ class WebsiteConfig {
         const brandText = document.querySelector('.brand-text');
         if (brandText) {
             const fullTitle = this.config.site ? this.config.site.title : this.config.personal.name;
-            
+
             // Create responsive brand text structure
             if (fullTitle.includes("—")) {
                 // Split by the em dash and create responsive structure
                 const parts = fullTitle.split("—");
                 const name = parts[0].trim();
                 const title = parts[1].trim();
-                
+
                 brandText.innerHTML = `
                     <span class="brand-name">${name}</span>
                     <span class="brand-separator">—</span>
@@ -217,7 +217,7 @@ class WebsiteConfig {
         if (navLinks && this.config.personal.navigation) {
             navLinks.innerHTML = this.config.personal.navigation.links.map(link => {
                 let linkHtml = `<li><a href="${link.url}" class="nav-link"`;
-                
+
                 // Add target and rel attributes if specified
                 if (link.target) {
                     linkHtml += ` target="${link.target}"`;
@@ -225,7 +225,7 @@ class WebsiteConfig {
                 if (link.rel) {
                     linkHtml += ` rel="${link.rel}"`;
                 }
-                
+
                 linkHtml += `>${link.text}</a></li>`;
                 return linkHtml;
             }).join('');
@@ -236,7 +236,7 @@ class WebsiteConfig {
         if (mobileNavLinks && this.config.personal.navigation) {
             mobileNavLinks.innerHTML = this.config.personal.navigation.links.map(link => {
                 let linkHtml = `<li><a href="${link.url}" class="nav-link"`;
-                
+
                 // Add target and rel attributes if specified
                 if (link.target) {
                     linkHtml += ` target="${link.target}"`;
@@ -244,7 +244,7 @@ class WebsiteConfig {
                 if (link.rel) {
                     linkHtml += ` rel="${link.rel}"`;
                 }
-                
+
                 linkHtml += `>${link.text}</a></li>`;
                 return linkHtml;
             }).join('');
@@ -257,7 +257,7 @@ class WebsiteConfig {
     initMobileMenu() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const mobileMenu = document.querySelector('.mobile-menu');
-        
+
         if (mobileMenuToggle && mobileMenu) {
             mobileMenuToggle.addEventListener('click', () => {
                 mobileMenuToggle.classList.toggle('active');
@@ -360,8 +360,8 @@ class WebsiteConfig {
         const heroLinks = document.querySelector('.hero-links');
         if (heroLinks && this.config.personal.buttons) {
             heroLinks.innerHTML = this.config.personal.buttons.map(button => {
-                let buttonHtml = `<a href="${button.url}" class="${button.class}"`;
-                
+                let buttonHtml = `<a href="${button.url}" class="${button.class}" title="${button.text}" aria-label="${button.text}"`;
+
                 // Add target and rel attributes if specified
                 if (button.target) {
                     buttonHtml += ` target="${button.target}"`;
@@ -369,14 +369,20 @@ class WebsiteConfig {
                 if (button.rel) {
                     buttonHtml += ` rel="${button.rel}"`;
                 }
-                
+
                 buttonHtml += '>';
-                if (button.icon) {
-                    buttonHtml += `<i class="${button.icon}"></i> `;
+
+                if (button.image) {
+                    buttonHtml += `<img src="${button.image}" alt="${button.text}" class="btn-icon-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\\'fas fa-external-link-alt\\'></i>'">`;
+                } else if (button.icon) {
+                    buttonHtml += `<i class="${button.icon}"></i>`;
+                } else {
+                    // Fallback to text if no icon or image
+                    buttonHtml += button.text;
                 }
-                buttonHtml += button.text;
+
                 buttonHtml += '</a>';
-                
+
                 return buttonHtml;
             }).join('');
         }
@@ -387,12 +393,12 @@ class WebsiteConfig {
         if (researchGrid && this.config.research && this.config.research.areas) {
             researchGrid.innerHTML = this.config.research.areas.map(area => {
                 let description = area.description;
-                
+
                 // Handle link in description if it exists
                 if (area.link) {
                     const linkText = area.link.text;
                     const linkUrl = area.link.url;
-                    
+
                     // Replace the specific text with a link (case-insensitive)
                     const regex = new RegExp(linkText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
                     description = description.replace(
@@ -400,7 +406,7 @@ class WebsiteConfig {
                         `<a href="${linkUrl}" class="research-link" target="_blank" rel="noopener noreferrer">$&</a>`
                     );
                 }
-                
+
                 return `
                     <div class="research-card">
                         <div class="card-icon">
@@ -423,16 +429,16 @@ class WebsiteConfig {
             // Get selected and non-selected publications
             const selectedPapers = this.config.papers.papers.filter(paper => paper.selected);
             const nonSelectedPapers = this.config.papers.papers.filter(paper => !paper.selected);
-            
+
             // Show selected publications first, then fill remaining slots with non-selected
             const maxPublications = 4;
             const selectedCount = Math.min(selectedPapers.length, maxPublications);
             const remainingSlots = maxPublications - selectedCount;
             const recentNonSelected = nonSelectedPapers.slice(0, remainingSlots);
-            
+
             // Combine selected and non-selected publications
             const displayPapers = [...selectedPapers.slice(0, selectedCount), ...recentNonSelected];
-            
+
             papersGrid.innerHTML = displayPapers.map(paper => `
                 <div class="paper-card">
                     <div class="paper-header">
@@ -455,7 +461,7 @@ class WebsiteConfig {
                     </div>
                 </div>
             `).join('');
-            
+
             // Add "View All Publications" button if there are more than 4 total publications
             if (this.config.papers.papers.length > 4) {
                 papersGrid.insertAdjacentHTML('afterend', `
@@ -475,7 +481,7 @@ class WebsiteConfig {
         if (talksGrid && this.config.talks && this.config.talks.talks) {
             // Show only the most recent 3 talks on the main page
             const recentTalks = this.config.talks.talks.slice(0, 3);
-            
+
             talksGrid.innerHTML = recentTalks.map(talk => `
                 <div class="talk-card">
                     <div class="talk-header">
@@ -498,7 +504,7 @@ class WebsiteConfig {
                     </div>
                 </div>
             `).join('');
-            
+
             // Add "View All Talks" button if there are more than 3 talks
             if (this.config.talks.talks.length > 3) {
                 talksGrid.insertAdjacentHTML('afterend', `
@@ -516,10 +522,10 @@ class WebsiteConfig {
     updateAboutSection() {
         const aboutContent = document.querySelector('.about-content');
         if (aboutContent && this.config.site && this.config.site.person.about) {
-            const aboutParagraphs = this.config.site.person.about.map(paragraph => 
+            const aboutParagraphs = this.config.site.person.about.map(paragraph =>
                 `<p>${paragraph}</p>`
             ).join('');
-            
+
             // Find the h2 element and replace everything after it
             const h2Element = aboutContent.querySelector('h2');
             if (h2Element) {
@@ -553,7 +559,7 @@ class WebsiteConfig {
         // Update research areas in footer
         const footerResearchList = document.querySelector('.footer-section ul');
         if (footerResearchList && this.config.research && this.config.research.areas) {
-            footerResearchList.innerHTML = this.config.research.areas.map(area => 
+            footerResearchList.innerHTML = this.config.research.areas.map(area =>
                 `<li>${area.title}</li>`
             ).join('');
         }

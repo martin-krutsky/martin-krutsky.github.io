@@ -2,26 +2,40 @@
   "title": "Areas of Expertise",
   "areas": [
     {
-      "title": "NeSy Interpretability",
-      "description": "Bridging the gap between deep learning, symbolic reasoning, and mechanistic interpretability to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks of well-defined expressivity into symbolic concepts.",
+      "title": "Explainable AI",
+      "description": "Bridging the gap between mechanistic interpretability and symbolic reasoning to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks of well-defined expressivity into symbolic concepts.",
       "icon": "fas fa-network-wired",
-      "tags": ["Neuro-Symbolic AI", "Deep Learning", "Mechanistic Interpretability"]
+      "tags": [
+        "Neurosymbolic AI",
+        "Deep Learning",
+        "Mechanistic Interpretability"
+      ]
     },
     {
       "title": "Responsible AI",
       "description": "Researching responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the audience and regulatory perspective.",
       "icon": "fas fa-shield-alt",
-      "tags": ["AI Ethics", "AI Safety", "Explainability", "Governance"],
+      "tags": [
+        "AI Ethics",
+        "AI Safety",
+        "Explainability",
+        "Governance"
+      ],
       "link": {
         "text": "with my colleagues",
-        "url": "https://rai.fel.cvut.cz/authors-list.html"
+        "url": "https://rai.fel.cvut.cz/authors-list/"
       }
     },
     {
       "title": "Custom AI Solutions",
       "description": "Developing custom AI solutions based on state-of-the-art LLM stack (with RAG, agents, evals, etc.), as well as domain-specific data-based machine learning solutions.",
       "icon": "fas fa-brain",
-      "tags": ["LLMs", "NLP", "Computer Vision", "Data Science"]
+      "tags": [
+        "LLMs",
+        "NLP",
+        "Computer Vision",
+        "Data Science"
+      ]
     }
   ]
-} 
+}

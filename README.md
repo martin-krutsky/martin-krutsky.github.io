@@ -8,7 +8,7 @@ This is a personal academic website for Martin Krutský, a PhD student in AI at 
 - **Modern Design**: Clean, responsive design with gradient backgrounds and smooth animations
 - **Research Focus**: Dedicated sections for AI research areas including:
   - Personal AI Projects
-  - Neuro-symbolic Interpretability
+  - Neurosymbolic Interpretability
   - Responsible AI
 - **Publications Section**: Showcase of research papers and academic publications
 - **Talks & Presentations**: Collection of presentations and workshops
