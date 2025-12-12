@@ -594,8 +594,10 @@ h6,
     gap: 1rem;
 }
 
-.paper-title {
-    font-size: 1.3rem;
+.paper-title,
+.talk-title,
+.publication-title {
+    font-size: 1.4rem;
     color: #333;
     margin: 0;
     flex: 1;
@@ -800,21 +802,6 @@ h6,
     margin-bottom: 1rem;
     flex-wrap: wrap;
     gap: 1rem;
-}
-
-.talk-title {
-    font-size: 1.3rem;
-    color: #333;
-    margin: 0;
-    flex: 1;
-    line-height: 1.4;
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
 }
 
 .talk-date {
