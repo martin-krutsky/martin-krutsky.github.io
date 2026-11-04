@@ -39,6 +39,25 @@
         }
       ]
     },{
+      "title": "XAI Desiderata for Trustworthy AI: Insights from the AI Act",
+      "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler, G. Šír",
+      "venue": "The European Workshop on Trustworthy AI (ECAI 2025), Bologna",
+      "year": "2025",
+      "type": "Workshop",
+      "description": "We propose a governance-aligned framework for evaluating explainable-AI methods, drawing on key desiderata from recent XAI research. The framework assesses explanation techniques along dimensions such as stakeholder understandability, faithfulness, verifiability, actionability, and scalability. By linking these criteria to practical oversight and audit needs, including those emerging under the EU AI Act, the approach helps institutions select XAI methods that integrate effectively into organizational decision processes and compliance workflows.",
+      "links": [
+        {
+          "text": "Preprint",
+          "icon": "fas fa-newspaper",
+          "url": "https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf"
+        },
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/conferences/ecai_trust_ai_workshop/"
+        }
+      ]
+    },{
       "title": "\"Cause\" is Mechanistic Narrative within Scientific Domains: An Ordinary Language Philosophical Critique of \"Causal Machine Learning\"",
       "authors": "V. Kungurtsev, L. C. Moore, G. Šír, M. Krutský",
       "venue": "arXiv preprint",

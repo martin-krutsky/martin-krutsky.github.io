@@ -1,5 +1,5 @@
 // Service Worker for caching configuration files
-const CACHE_NAME = 'martin-krutsky-cache-v1';
+const CACHE_NAME = 'martin-krutsky-cache-v2';
 const CONFIG_FILES = [
     '/config/version.json',
     '/config/site.json',

@@ -3,17 +3,18 @@
   "areas": [
     {
       "title": "Explainable AI",
-      "description": "Bridging the gap between mechanistic interpretability and symbolic reasoning to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks of well-defined expressivity into symbolic concepts.",
+      "description": "Bridging the gap between mechanistic interpretability and symbolic reasoning to create more trustworthy AI systems. My research focuses on reverse-engineering neural networks into symbolic concepts through logic-guided circuit discovery, sparse autoencoders, and provable GNN explanations.",
       "icon": "fas fa-network-wired",
       "tags": [
+        "Mechanistic Interpretability",
         "Neurosymbolic AI",
-        "Deep Learning",
-        "Mechanistic Interpretability"
+        "Sparse Autoencoders",
+        "Graph Neural Networks"
       ]
     },
     {
       "title": "Responsible AI",
-      "description": "Researching responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we are currently working on evaluation of XAI techniques from the audience and regulatory perspective.",
+      "description": "Researching responsible approaches to AI development with respect to ethics, safety, and societal impact. With my colleagues, we assess XAI techniques for AI governance, deriving explainability desiderata from the EU AI Act.",
       "icon": "fas fa-shield-alt",
       "tags": [
         "AI Ethics",

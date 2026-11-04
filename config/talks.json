@@ -3,6 +3,56 @@
   "description": "A collection of my presentations, talks, and speaking engagements at conferences, workshops, and public events.",
   "talks": [
     {
+      "title": "First Prague Workshop on Responsible AI",
+      "authors": "M. Krutský, J. Peleška, J. Němeček, L. Stewart, E. Skládalová, G. Šír",
+      "date": "October 9, 2026",
+      "venue": "FEE CTU, Prague",
+      "tags": ["Workshop", "Organizer"],
+      "description": "Co-organized a one-day interdisciplinary workshop on behalf of the Responsible AI in Prague Initiative, held under the auspices of CTU's Chief AI Officer, with more than 130 registrations. A human rights lawyer, a sociologist, an AI safety researcher, a philosopher, and an economist shared one stage, alongside two panels and community lightning talks on AI ethics, governance, safety, and trustworthiness. Moderated the Q&A for the invited speakers.",
+      "links": [
+        {
+          "text": "Event",
+          "icon": "fas fa-calendar-alt",
+          "url": "https://rai.fel.cvut.cz/events/prague-workshop-responsible-ai-2026/"
+        },
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/rai-workshop-2026-recap/"
+        }
+      ]
+    },
+    {
+      "title": "Communicating Responsible AI to Different Audiences",
+      "authors": "M. Krutský, J. Peleška",
+      "date": "June 25, 2026",
+      "venue": "SciComm Meetup: Finding Your Voice, CTU, Prague",
+      "tags": ["Talk", "Science Communication"],
+      "description": "A case study of how the same talk on AI ethics and explainability changes across audiences, from academic conferences to high-school students and festival crowds. We contrasted the structure of academic and public talks and the risks each faces, from sensationalism to oversimplification, arguing that scientific and public communication form a spectrum rather than separate disciplines.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/scicomm-meetup/"
+        }
+      ]
+    },
+    {
+      "title": "Discussing Responsible AI with European Youth Workers",
+      "authors": "M. Krutský, J. Peleška",
+      "date": "March 25, 2026",
+      "venue": "Erasmus+ Youth Training Course \"AI Unlocked\" (CEFIG International), FEE CTU, Prague",
+      "tags": ["Public Talk", "Education"],
+      "description": "Hosted a study visit for 24 youth workers, NGO staff, and educators from across Europe attending a week-long training on AI in education. The talk contrasted generalist LLMs with narrow domain-specific ML, introduced the risk-based approach of the EU AI Act, examined whose values are taught to models during alignment, and demonstrated how explainable AI can help people understand, verify, and challenge AI decisions. It was followed by an interactive discussion in which participants applied these concepts to their own work.",
+      "links": [
+        {
+          "text": "Report",
+          "icon": "fas fa-file-alt",
+          "url": "https://rai.fel.cvut.cz/events/cefig-study-visit/"
+        }
+      ]
+    },
+    {
       "title": "When AI Slanders Us & Evaluating Explanations",
       "authors": "M. Krutský, J. Němeček, J. Peleška",
       "date": "November 6–7 & 12, 2025",
@@ -14,26 +64,6 @@
           "text": "Report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/ai_days_25/"
-        }
-      ]
-    },
-    {
-      "title": "XAI Desiderata for Trustworthy AI: Insights from the AI Act",
-      "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler, G. Šír",
-      "date": "October 26, 2025",
-      "venue": "The European Workshop on Trustworthy AI (ECAI 2025), Bologna",
-      "tags": ["Workshop", "Talk"],
-      "description": "We presented a governance-aligned framework for evaluating explainable-AI methods, drawing on key desiderata from recent XAI research. The framework assesses explanation techniques along dimensions such as stakeholder understandability, faithfulness, verifiability, actionability, and scalability. By linking these criteria to practical oversight and audit needs, including those emerging under the EU AI Act, the approach helps institutions select XAI methods that integrate effectively into organizational decision processes and compliance workflows.",
-      "links": [
-        {
-          "text": "Report",
-          "icon": "fas fa-file-alt",
-          "url": "https://rai.fel.cvut.cz/conferences/ecai_trust_ai_workshop/"
-        },
-        {
-          "text": "Preprint",
-          "icon": "fas fa-newspaper",
-          "url": "https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf"
         }
       ]
     },

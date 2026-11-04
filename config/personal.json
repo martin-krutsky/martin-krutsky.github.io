@@ -3,7 +3,7 @@
   "buttons": [
     {
       "text": "Email",
-      "url": "mailto:Martin.Krutsky@fel.cvut.cz",
+      "url": "mailto:martin.krutsky@cvut.cz",
       "class": "btn-icon",
       "icon": "fas fa-envelope"
     },
@@ -64,7 +64,7 @@
     },
     "email": {
       "platform": "Email",
-      "url": "mailto:Martin.Krutsky@fel.cvut.cz",
+      "url": "mailto:martin.krutsky@cvut.cz",
       "icon": "fas fa-envelope"
     }
   },
@@ -116,7 +116,7 @@
     ]
   },
   "copyright": {
-    "text": "© 2025 Martin Krutský. All rights reserved.",
+    "text": "© 2026 Martin Krutský. All rights reserved.",
     "poweredBy": "Powered by GitHub Pages"
   }
 }
