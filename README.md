@@ -28,7 +28,8 @@ _includes/           small templates (paper entry, authors, links, CV list)
 index.html           homepage
 publications.html    all publications
 talks.html           all talks
-assets/css/style.css styles (light + automatic dark mode)
+assets/css/style.css styles (light + automatic dark mode), @font-face rules
+assets/fonts/        self-hosted Lora + Source Sans 3 (SIL OFL), latin + latin-ext subsets
 sw.js                retires the service worker used by the old site; safe to delete later
 ```
 
