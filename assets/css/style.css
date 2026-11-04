@@ -68,6 +68,7 @@ h2 {
 
 /* Intro */
 .intro { display: flex; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+.intro picture { flex-shrink: 0; display: block; line-height: 0; }
 .intro-photo { width: 180px; height: 180px; flex-shrink: 0; border-radius: 50%; object-fit: cover; }
 .intro h1 { font-size: 2.25rem; margin: 0 0 .35rem; }
 .intro-role { margin: 0; color: var(--muted); }
@@ -134,6 +135,15 @@ h2 {
 .footer-links { display: flex; gap: 1rem; font-size: 1.1rem; }
 .footer-links a { color: var(--muted); }
 .footer-links a:hover { color: var(--accent); }
+
+/* Justified long paragraphs with hyphenation; phones keep left-aligned text */
+@media (min-width: 641px) {
+  .about p, .item-desc {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
 
 /* Mobile */
 @media (max-width: 640px) {

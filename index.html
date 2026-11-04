@@ -3,7 +3,10 @@ layout: default
 ---
 {%- assign p = site.data.profile -%}
 <section class="intro">
-  <img class="intro-photo" src="/{{ p.photo }}" alt="Photo of {{ p.name }}" width="180" height="180">
+  <picture>
+    <source type="image/webp" srcset="{{ p.photo_srcset }}">
+    <img class="intro-photo" src="/{{ p.photo }}" alt="Photo of {{ p.name }}" width="180" height="180" fetchpriority="high">
+  </picture>
   <div class="intro-text">
     <h1>{{ p.name }}</h1>
     <p class="intro-role">{{ p.role }} · <a href="{{ p.affiliation_url }}">{{ p.affiliation }}</a></p>

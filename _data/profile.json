@@ -4,7 +4,8 @@
   "affiliation": "Intelligent Data Analysis Lab, FEE, Czech Technical University in Prague",
   "affiliation_url": "https://ida.fel.cvut.cz/",
   "tagline": "Responsible AI · Mechanistic interpretability · Neurosymbolic AI",
-  "photo": "assets/images/profile-cropped.png",
+  "photo": "assets/images/profile-600.jpg",
+  "photo_srcset": "/assets/images/profile-360.webp 2x, /assets/images/profile-540.webp 3x",
   "email": "martin.krutsky@cvut.cz",
   "links": [
     { "text": "Email", "icon": "fas fa-envelope", "url": "mailto:martin.krutsky@cvut.cz" },
