@@ -2,16 +2,16 @@
   "title": "Focus areas",
   "areas": [
     {
-      "title": "Neurosymbolic interpretability",
-      "description": "Reverse-engineering neural networks into symbolic concepts: logic-guided circuit discovery, sparse autoencoders, and provably sufficient explanations of graph neural networks."
+      "title": "Responsible AI & governance",
+      "description": "Assessing whether explainability methods can support AI oversight and regulation, including XAI desiderata derived from the EU AI Act, plus ethics review and public engagement with the <a href=\"https://rai.fel.cvut.cz/authors-list/\">Responsible AI in Prague</a> team."
     },
     {
-      "title": "Responsible AI",
-      "description": "Assessing explainability methods for AI governance and regulation, including XAI desiderata derived from the EU AI Act, with the <a href=\"https://rai.fel.cvut.cz/authors-list/\">Responsible AI in Prague</a> team."
+      "title": "Mechanistic interpretability",
+      "description": "Understanding what neural networks compute, with sparse autoencoders, circuit discovery, and neurosymbolic methods that give provably sufficient explanations of graph neural networks."
     },
     {
       "title": "Applied ML & LLMs",
-      "description": "Five years of industry ML engineering, from Transformer-based NLP to shipped LLM applications with RAG, tools, and guardrails."
+      "description": "Five years of industry ML engineering and Python development, from Transformer-based NLP to shipped LLM applications with RAG, tools, and guardrails."
     }
   ]
 }
