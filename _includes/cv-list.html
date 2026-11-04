@@ -1,0 +1,8 @@
+<ul class="cv-list">
+  {%- for e in include.items %}
+  <li>
+    <span class="cv-what"><strong>{{ e.role }}</strong>, {% if e.url %}<a href="{{ e.url }}">{{ e.org }}</a>{% else %}{{ e.org }}{% endif %}{% if e.note %}, {{ e.note }}{% endif %}</span>
+    <span class="cv-when">{{ e.dates }}</span>
+  </li>
+  {%- endfor %}
+</ul>

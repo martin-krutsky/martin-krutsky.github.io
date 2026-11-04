@@ -1,0 +1,26 @@
+[
+  {
+    "date": "Oct 2026",
+    "text": "Co-organized the <a href=\"https://rai.fel.cvut.cz/events/rai-workshop-2026-recap/\">First Prague Workshop on Responsible AI</a> at FEE CTU (130+ registrations)."
+  },
+  {
+    "date": "Sep 2026",
+    "text": "Started an Applied Research Internship at <a href=\"https://superhuman.com/\">Superhuman</a> (formerly Grammarly)."
+  },
+  {
+    "date": "Jul 2026",
+    "text": "Joined the <a href=\"https://www.eleuther.ai/\">EleutherAI</a> Summer of Open AI Research (SOAR), working on sparse autoencoders."
+  },
+  {
+    "date": "Jun 2026",
+    "text": "Talk on <a href=\"https://rai.fel.cvut.cz/events/scicomm-meetup/\">communicating Responsible AI to different audiences</a> at the CTU SciComm Meetup."
+  },
+  {
+    "date": "Feb 2026",
+    "text": "Teaching assistant for the new Machine Learning Methods course at FEE CTU (explainable AI, neurosymbolic AI, LLMs for structured data)."
+  },
+  {
+    "date": "Oct 2025",
+    "text": "Presented <a href=\"https://arxiv.org/abs/2507.13703\">Binarizing Physics-Inspired GNNs</a> at ECAI 2025 and <a href=\"https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf\">XAI Desiderata for Trustworthy AI</a> at the European Workshop on Trustworthy AI held with ECAI, Bologna."
+  }
+]

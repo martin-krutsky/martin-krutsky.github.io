@@ -1,0 +1,14 @@
+title: "Martin Krutský — AI Researcher"
+description: "PhD researcher in AI working on responsible AI, AI governance, and mechanistic interpretability at the Czech Technical University in Prague."
+url: "https://martin-krutsky.github.io"
+baseurl: ""
+lang: en
+
+# Not published to the site
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .idea

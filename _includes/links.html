@@ -1,0 +1,7 @@
+{%- if include.links and include.links.size > 0 -%}
+<span class="item-links">
+  {%- for link in include.links %}
+  <a href="{{ link.url }}">{{ link.text }}</a>
+  {%- endfor %}
+</span>
+{%- endif -%}

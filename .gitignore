@@ -34,3 +34,5 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+# Jekyll build cache
+.jekyll-cache/

@@ -1,22 +1,25 @@
 {
   "title": "Talks",
-  "description": "A collection of my presentations, talks, and speaking engagements at conferences, workshops, and public events.",
+  "description": "Conference presentations, public talks, and events I have organized.",
   "talks": [
     {
       "title": "First Prague Workshop on Responsible AI",
-      "authors": "M. Krutský, J. Peleška, J. Němeček, L. Stewart, E. Skládalová, G. Šír",
+      "authors": "J. Peleška, M. Krutský, J. Němeček, L. Stewart, E. Skládalová, G. Šír",
       "date": "October 9, 2026",
       "venue": "FEE CTU, Prague",
-      "tags": ["Workshop", "Organizer"],
+      "tags": [
+        "Workshop",
+        "Organizer"
+      ],
       "description": "Co-organized a one-day interdisciplinary workshop on behalf of the Responsible AI in Prague Initiative, held under the auspices of CTU's Chief AI Officer, with more than 130 registrations. A human rights lawyer, a sociologist, an AI safety researcher, a philosopher, and an economist shared one stage, alongside two panels and community lightning talks on AI ethics, governance, safety, and trustworthiness. Moderated the Q&A for the invited speakers.",
       "links": [
         {
-          "text": "Event",
+          "text": "Event page",
           "icon": "fas fa-calendar-alt",
           "url": "https://rai.fel.cvut.cz/events/prague-workshop-responsible-ai-2026/"
         },
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/rai-workshop-2026-recap/"
         }
@@ -27,11 +30,14 @@
       "authors": "M. Krutský, J. Peleška",
       "date": "June 25, 2026",
       "venue": "SciComm Meetup: Finding Your Voice, CTU, Prague",
-      "tags": ["Talk", "Science Communication"],
+      "tags": [
+        "Talk",
+        "Science Communication"
+      ],
       "description": "A case study of how the same talk on AI ethics and explainability changes across audiences, from academic conferences to high-school students and festival crowds. We contrasted the structure of academic and public talks and the risks each faces, from sensationalism to oversimplification, arguing that scientific and public communication form a spectrum rather than separate disciplines.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/scicomm-meetup/"
         }
@@ -42,11 +48,14 @@
       "authors": "M. Krutský, J. Peleška",
       "date": "March 25, 2026",
       "venue": "Erasmus+ Youth Training Course \"AI Unlocked\" (CEFIG International), FEE CTU, Prague",
-      "tags": ["Public Talk", "Education"],
+      "tags": [
+        "Public Talk",
+        "Education"
+      ],
       "description": "Hosted a study visit for 24 youth workers, NGO staff, and educators from across Europe attending a week-long training on AI in education. The talk contrasted generalist LLMs with narrow domain-specific ML, introduced the risk-based approach of the EU AI Act, examined whose values are taught to models during alignment, and demonstrated how explainable AI can help people understand, verify, and challenge AI decisions. It was followed by an interactive discussion in which participants applied these concepts to their own work.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/cefig-study-visit/"
         }
@@ -57,11 +66,15 @@
       "authors": "M. Krutský, J. Němeček, J. Peleška",
       "date": "November 6–7 & 12, 2025",
       "venue": "Multiple events at AI Days 2025, Prague",
-      "tags": ["Public Talk", "Education", "Forum"],
+      "tags": [
+        "Public Talk",
+        "Education",
+        "Forum"
+      ],
       "description": "Gave several presentations during AI Days 2025 focused on high-risk AI decisions and explainability. Led two interactive session for high-school students using a mock online-proctoring scenario to explore trust in AI decisions. Concluded with a research-oriented talk at the Young AI Research Forum on the importance of explainability for fairness and accountability.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/ai_days_25/"
         }
@@ -72,11 +85,13 @@
       "authors": "M. Krutský, J. Němeček, P. Gürtler, J. Peleška, G. Šír",
       "date": "May 27, 2025",
       "venue": "International Conference on Large-Scale AI Risks, KU Leuven",
-      "tags": ["Conference"],
+      "tags": [
+        "Conference"
+      ],
       "description": "Presented our work on explainable AI assessment for AI safety governance. We proposed a 5-dimensional framework for evaluating explainable AI methods in safety contexts: understandability to subjects and auditors, veracity, actionability, and scalability. This framework addresses the challenge of specifying and enforcing safety criteria for AI models deployed in complex, dynamic environments. The approach enables stakeholders to react flexibly to emerging safety concerns through meaningful human oversight and technical explainability.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/leuven-risk/"
         },
@@ -92,11 +107,14 @@
       "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler",
       "date": "May 22, 2025",
       "venue": "29th International Student Scientific Conference (POSTER), Prague",
-      "tags": ["Conference", "Poster"],
+      "tags": [
+        "Conference",
+        "Poster"
+      ],
       "description": "Presented our work on human-AI alignment challenges and the role of explainability in continuous oversight. We argued that explainability is essential for bridging the gap between AI systems, governance, and human intervention, given the infeasibility of anticipating all potential misalignment risks. We proposed a structured framework for evaluating explainability methods that moves beyond narrow technical metrics to enhance AI accountability and alignment.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/poster-xai-alignment/"
         },
@@ -112,11 +130,14 @@
       "authors": "J. Němeček, M. Krutský",
       "date": "October 18, 2024",
       "venue": "AI 4 All at AI Days 2024, Prague",
-      "tags": ["Public Talk", "Education"],
+      "tags": [
+        "Public Talk",
+        "Education"
+      ],
       "description": "Gave two talks on the ethics of AI from the perspective of technical researchers and developers. The first talk was tailored to high school students in the morning, and the second talk was aimed at the general public in the late afternoon. Topics covered included AI alignment, RLHF, jailbreaking, constitutional AI, and measuring ethics and morality in LLMs.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/aidev-ethics-talk-report/"
         }
@@ -127,15 +148,17 @@
       "authors": "Martin Krutský",
       "date": "November 3, 2023",
       "venue": "Seminar for AI Days 2023, Prague",
-      "tags": ["Public Lecture"],
+      "tags": [
+        "Public Lecture"
+      ],
       "description": "Organized and presented at a seminar mapping the landscape of Responsible AI projects in Prague. More than 50 people concerned with the responsible development of AI technologies attended to listen and discuss the many different societal impacts of AI. The talk covered the definition of Responsible AI, mapping of RAI efforts in Prague, and the relationship between AI ethics and AI safety.",
       "links": [
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/rai-talk-report/"
         }
       ]
     }
   ]
-} 
+}

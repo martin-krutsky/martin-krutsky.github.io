@@ -1,7 +1,7 @@
 {
   "title": "Publications",
   "subtitle": "Research papers and academic publications",
-  "description": "A collection of my research papers, conference proceedings, and other academic contributions to the field of artificial intelligence.",
+  "description": "Peer-reviewed papers, preprints, and theses. See also Google Scholar.",
   "papers": [
     {
       "title": "Binarizing Physics-Inspired GNNs for Combinatorial Optimization",
@@ -13,17 +13,18 @@
       "description": "Building on insights from fuzzy logic and binarized neural networks, we developed methods that significantly improve the performance of Physics-inspired graph neural networks (PI-GNNs) on dense combinatorial optimization problems. Our research found that PI-GNNs struggle with denser problems due to their dependency on phase transition during training. We resolved the issue by informing the network about the relaxation of the underlying binary problem, adjusting the activation function and the loss.",
       "links": [
         {
-          "text": "Proceedings",
+          "text": "Paper",
           "icon": "fas fa-newspaper",
           "url": "https://ebooks.iospress.nl/doi/10.3233/FAIA251038"
         },
         {
-          "text": "arXiv",
+          "text": "Preprint (arXiv)",
           "icon": "ai ai-arxiv",
           "url": "https://arxiv.org/abs/2507.13703"
         }
       ]
-    },{
+    },
+    {
       "title": "Geometric Deep Learning for the Rubik's Cube Group",
       "authors": "M. Krutský and G. Šír",
       "venue": "IEEE Transactions on Neural Networks and Learning Systems",
@@ -33,12 +34,13 @@
       "description": "A novel deep learning approach leverages the Rubik's Cube's inherent symmetries to solve it efficiently. By thoroughly analyzing the problem's group-theoretical properties, we developed a symmetry-invariant neural architecture with graph convolutional layers that significantly compresses the cube's vast state space. This new architecture demonstrates superior performance, enhanced generalization, and improved problem-solving abilities compared to previous state-of-the-art results.",
       "links": [
         {
-          "text": "IEEE TNNLS",
+          "text": "Paper",
           "icon": "ai ai-ieee",
           "url": "https://doi.org/10.1109/TNNLS.2025.3599009"
         }
       ]
-    },{
+    },
+    {
       "title": "XAI Desiderata for Trustworthy AI: Insights from the AI Act",
       "authors": "M. Krutský, J. Němeček, J. Peleška, P. Gürtler, G. Šír",
       "venue": "The European Workshop on Trustworthy AI (ECAI 2025), Bologna",
@@ -47,17 +49,19 @@
       "description": "We propose a governance-aligned framework for evaluating explainable-AI methods, drawing on key desiderata from recent XAI research. The framework assesses explanation techniques along dimensions such as stakeholder understandability, faithfulness, verifiability, actionability, and scalability. By linking these criteria to practical oversight and audit needs, including those emerging under the EU AI Act, the approach helps institutions select XAI methods that integrate effectively into organizational decision processes and compliance workflows.",
       "links": [
         {
-          "text": "Preprint",
+          "text": "Preprint (PDF)",
           "icon": "fas fa-newspaper",
           "url": "https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf"
         },
         {
-          "text": "Report",
+          "text": "Event report",
           "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/ecai_trust_ai_workshop/"
         }
-      ]
-    },{
+      ],
+      "selected": true
+    },
+    {
       "title": "\"Cause\" is Mechanistic Narrative within Scientific Domains: An Ordinary Language Philosophical Critique of \"Causal Machine Learning\"",
       "authors": "V. Kungurtsev, L. C. Moore, G. Šír, M. Krutský",
       "venue": "arXiv preprint",
@@ -66,7 +70,7 @@
       "description": "A philosophical critique of causal machine learning that applies Ordinary Language methodology to investigate the semantics of cause and effect reasoning. The work examines how causality manifests differently across scientific domains (physics/engineering, biology, social sciences) and argues that definitive causal claims require evidence aggregation across multiple domains, highlighting methodological challenges in harmonizing language games and emergence across scales.",
       "links": [
         {
-          "text": "arXiv",
+          "text": "Preprint (arXiv)",
           "icon": "ai ai-arxiv-square",
           "url": "https://arxiv.org/abs/2501.05844"
         }
@@ -103,4 +107,4 @@
       ]
     }
   ]
-} 
+}
