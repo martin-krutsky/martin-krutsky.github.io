@@ -1,0 +1,20 @@
+{%- assign paper = include.paper -%}
+<li class="item">
+  <div class="item-title">
+    {%- if paper.links and paper.links.size > 0 -%}
+    <a href="{{ paper.links[0].url }}">{{ paper.title }}</a>
+    {%- else -%}
+    {{ paper.title }}
+    {%- endif -%}
+  </div>
+  <div class="item-meta">
+    {% include authors.html authors=paper.authors %}
+    <span class="sep">·</span>
+    <em>{{ paper.venue }}</em>, {{ paper.year }}
+    {%- unless paper.type == "Conference" or paper.type == "Journal" %} <span class="badge">{{ paper.type }}</span>{% endunless %}
+  </div>
+  {%- if include.full and paper.description %}
+  <p class="item-desc">{{ paper.description }}</p>
+  {%- endif %}
+  {% include links.html links=paper.links %}
+</li>

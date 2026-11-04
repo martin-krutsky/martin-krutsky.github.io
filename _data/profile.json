@@ -1,0 +1,22 @@
+{
+  "name": "Martin Krutský",
+  "role": "PhD student in AI",
+  "affiliation": "Intelligent Data Analysis Lab, FEE, Czech Technical University in Prague",
+  "affiliation_url": "https://ida.fel.cvut.cz/",
+  "tagline": "Mechanistic interpretability · Neurosymbolic AI · Responsible AI",
+  "photo": "assets/images/profile-cropped.png",
+  "email": "martin.krutsky@cvut.cz",
+  "links": [
+    { "text": "Email", "icon": "fas fa-envelope", "url": "mailto:martin.krutsky@cvut.cz" },
+    { "text": "CV", "icon": "fas fa-file-pdf", "url": "/assets/files/cv.pdf" },
+    { "text": "Scholar", "icon": "ai ai-google-scholar", "url": "https://scholar.google.com/citations?user=0oqgfqMAAAAJ" },
+    { "text": "GitHub", "icon": "fab fa-github", "url": "https://github.com/martin-krutsky" },
+    { "text": "LinkedIn", "icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/martin-krutsky" },
+    { "text": "ORCID", "icon": "ai ai-orcid", "url": "https://orcid.org/0009-0000-9710-1147" }
+  ],
+  "about": [
+    "I am a PhD student at the <a href=\"https://ida.fel.cvut.cz/\">Intelligent Data Analysis Lab</a>, <a href=\"https://fel.cvut.cz\">Faculty of Electrical Engineering</a> at the <a href=\"https://cvut.cz\">Czech Technical University</a> in Prague, supervised by <a href=\"https://gustiks.github.io/\">Gustav Šír</a>. My research is on neurosymbolic mechanistic interpretability: logic-guided circuit discovery, sparse feature learning, and provably sufficient explanations of graph neural networks. Previously, I worked on symmetry-invariant deep learning and binarized GNNs for combinatorial optimization.",
+    "This autumn, I am an Applied Research Intern at <a href=\"https://superhuman.com/\">Superhuman</a> (formerly Grammarly), using natural language autoencoders to explain AI-text detectors and AI humanizer models. I am also part of the <a href=\"https://www.eleuther.ai/\">EleutherAI</a> Summer of Open AI Research (SOAR), studying sparse autoencoder pathologies that mimic feature hierarchy.",
+    "I co-founded <a href=\"https://rai.fel.cvut.cz/\">Responsible AI in Prague</a>, an initiative organizing talks, debates, and the <a href=\"https://rai.fel.cvut.cz/events/rai-workshop-2026-recap/\">Prague Workshop on Responsible AI</a>. Our research assesses explainability methods for AI governance. I also bring 5+ years of industry ML engineering, from NLP models to shipped LLM applications."
+  ]
+}

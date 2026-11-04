@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- if page.title %}
+  {%- assign page_title = page.title | append: " · " | append: site.data.profile.name -%}
+  {%- else %}
+  {%- assign page_title = site.title -%}
+  {%- endif %}
+  {%- assign page_description = page.description | default: site.description %}
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+  <meta property="og:image" content="{{ site.url }}/{{ site.data.profile.photo }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="/">{{ site.data.profile.name }}</a>
+      <ul class="nav-links">
+        <li><a href="/publications.html"{% if page.url == '/publications.html' %} aria-current="page"{% endif %}>Publications</a></li>
+        <li><a href="/talks.html"{% if page.url == '/talks.html' %} aria-current="page"{% endif %}>Talks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© {{ site.time | date: "%Y" }} {{ site.data.profile.name }}</span>
+      <span class="footer-links">
+        {%- for link in site.data.profile.links %}
+        {%- unless link.text == "CV" %}
+        <a href="{{ link.url }}" aria-label="{{ link.text }}" title="{{ link.text }}"><i class="{{ link.icon }}" aria-hidden="true"></i></a>
+        {%- endunless %}
+        {%- endfor %}
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

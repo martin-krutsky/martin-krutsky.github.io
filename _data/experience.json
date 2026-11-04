@@ -1,0 +1,21 @@
+{
+  "research": [
+    { "role": "Applied Research Intern", "org": "Superhuman (formerly Grammarly)", "url": "https://superhuman.com/", "dates": "Sep 2026 – Dec 2026" },
+    { "role": "Research Participant", "org": "EleutherAI Summer of Open AI Research", "url": "https://www.eleuther.ai/", "dates": "Jul 2026 – present" },
+    { "role": "AI Researcher & PhD Student", "org": "Intelligent Data Analysis Lab, FEE CTU", "url": "https://ida.fel.cvut.cz/", "dates": "Apr 2024 – present" },
+    { "role": "Co-founder & Researcher", "org": "Responsible AI in Prague", "url": "https://rai.fel.cvut.cz/", "dates": "Sep 2023 – present" },
+    { "role": "Student Researcher", "org": "Center for Machine Perception, FEE CTU", "url": "https://cmp.felk.cvut.cz/", "dates": "Aug 2018 – Aug 2019" }
+  ],
+  "industry": [
+    { "role": "ML Researcher & AI Engineer", "org": "Leeaf / McEDISON", "url": "https://leeaf.life/", "dates": "Aug 2023 – Apr 2026" },
+    { "role": "Software Engineering Intern", "org": "Microsoft", "url": "https://www.microsoft.com/", "dates": "Jul 2022 – Sep 2022" },
+    { "role": "Machine Learning Developer", "org": "Blindspot Solutions", "url": "https://blindspot.ai/", "dates": "Oct 2020 – May 2022" },
+    { "role": "Part-Time Developer", "org": "Barclays", "url": "https://www.barclays.co.uk/", "dates": "Sep 2019 – Sep 2020" }
+  ],
+  "education": [
+    { "role": "Ph.D., Computer Science", "org": "Czech Technical University in Prague", "url": "https://fel.cvut.cz/", "dates": "2024 – present" },
+    { "role": "M.Sc., Artificial Intelligence (with honors)", "org": "Czech Technical University in Prague", "url": "https://fel.cvut.cz/", "dates": "2021 – 2024" },
+    { "role": "Erasmus+ exchange, Artificial Intelligence", "org": "Aalto University, Finland", "url": "https://www.aalto.fi/", "dates": "2023" },
+    { "role": "B.Sc., Computer Science and AI", "org": "Czech Technical University in Prague", "url": "https://fel.cvut.cz/", "note": "with the <a href=\"https://prg.ai/en/minor/\">prg.ai Minor</a>", "dates": "2018 – 2021" }
+  ]
+}
