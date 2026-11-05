@@ -75,6 +75,16 @@
 }
 @font-face {
   font-family: "Lora Fallback";
+  font-style: italic;
+  src: local("Georgia Italic"), local("Georgia-Italic");
+  size-adjust: 100.3%;
+  ascent-override: 100.7%;
+  descent-override: 26.9%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Lora Fallback";
+  font-style: normal;
   src: local("Georgia");
   size-adjust: 105.7%;
   ascent-override: 95.6%;
