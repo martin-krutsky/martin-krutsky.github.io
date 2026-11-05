@@ -14,12 +14,10 @@
       "links": [
         {
           "text": "Paper",
-          "icon": "fas fa-newspaper",
           "url": "https://ebooks.iospress.nl/doi/10.3233/FAIA251038"
         },
         {
           "text": "Preprint (arXiv)",
-          "icon": "ai ai-arxiv",
           "url": "https://arxiv.org/abs/2507.13703"
         }
       ]
@@ -35,7 +33,6 @@
       "links": [
         {
           "text": "Paper",
-          "icon": "ai ai-ieee",
           "url": "https://doi.org/10.1109/TNNLS.2025.3599009"
         }
       ]
@@ -50,12 +47,10 @@
       "links": [
         {
           "text": "Preprint (PDF)",
-          "icon": "fas fa-newspaper",
           "url": "https://rai.fel.cvut.cz/papers/XAI_Desiderata_TRUST_AI.pdf"
         },
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/ecai_trust_ai_workshop/"
         }
       ],
@@ -71,7 +66,6 @@
       "links": [
         {
           "text": "Preprint (arXiv)",
-          "icon": "ai ai-arxiv-square",
           "url": "https://arxiv.org/abs/2501.05844"
         }
       ]
@@ -86,7 +80,6 @@
       "links": [
         {
           "text": "Thesis",
-          "icon": "fas fa-file-alt",
           "url": "https://dspace.cvut.cz/handle/10467/115032"
         }
       ]
@@ -101,7 +94,6 @@
       "links": [
         {
           "text": "Thesis",
-          "icon": "fas fa-file-alt",
           "url": "https://dspace.cvut.cz/handle/10467/94670"
         }
       ]

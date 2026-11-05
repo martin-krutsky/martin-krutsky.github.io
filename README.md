@@ -24,7 +24,7 @@ The CV download is `assets/files/cv.pdf`.
 _config.yml          site title, description, URL
 _data/               content (see above)
 _layouts/default.html  page shell: head/meta tags, header, footer
-_includes/           small templates (paper entry, authors, links, CV list)
+_includes/           small templates (paper entry, authors, links, CV list, inline SVG icons)
 index.html           homepage
 publications.html    all publications
 talks.html           all talks
@@ -42,3 +42,8 @@ docker run --rm -p 4000:4000 -v "$PWD:/srv/jekyll" jekyll/jekyll:4.2.2 jekyll se
 ```
 
 Then open http://localhost:4000.
+
+## Credits
+
+- Fonts: [Lora](https://fonts.google.com/specimen/Lora) and [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3), SIL Open Font License 1.1.
+- Icons in `_includes/icon.html`: [Font Awesome Free 6.4.0](https://fontawesome.com) (envelope, file-pdf, github, linkedin; icons licensed CC BY 4.0) and [Academicons 1.9.2](https://jpswalsh.github.io/academicons/) (google-scholar, orcid; SIL OFL 1.1).

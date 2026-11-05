@@ -8,12 +8,12 @@
   "photo_srcset": "/assets/images/profile-360.webp 2x, /assets/images/profile-540.webp 3x",
   "email": "martin.krutsky@cvut.cz",
   "links": [
-    { "text": "Email", "icon": "fas fa-envelope", "url": "mailto:martin.krutsky@cvut.cz" },
-    { "text": "CV", "icon": "fas fa-file-pdf", "url": "/assets/files/cv.pdf" },
-    { "text": "Scholar", "icon": "ai ai-google-scholar", "url": "https://scholar.google.com/citations?user=0oqgfqMAAAAJ" },
-    { "text": "GitHub", "icon": "fab fa-github", "url": "https://github.com/martin-krutsky" },
-    { "text": "LinkedIn", "icon": "fab fa-linkedin", "url": "https://www.linkedin.com/in/martin-krutsky" },
-    { "text": "ORCID", "icon": "ai ai-orcid", "url": "https://orcid.org/0009-0000-9710-1147" }
+    { "text": "Email", "icon": "envelope", "url": "mailto:martin.krutsky@cvut.cz" },
+    { "text": "CV", "icon": "file-pdf", "url": "/assets/files/cv.pdf" },
+    { "text": "Scholar", "icon": "google-scholar", "url": "https://scholar.google.com/citations?user=0oqgfqMAAAAJ" },
+    { "text": "GitHub", "icon": "github", "url": "https://github.com/martin-krutsky" },
+    { "text": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/martin-krutsky" },
+    { "text": "ORCID", "icon": "orcid", "url": "https://orcid.org/0009-0000-9710-1147" }
   ],
   "about": [
     "I am a PhD student at the <a href=\"https://ida.fel.cvut.cz/\">Intelligent Data Analysis Lab</a>, <a href=\"https://fel.cvut.cz\">Faculty of Electrical Engineering</a> at the <a href=\"https://cvut.cz\">Czech Technical University</a> in Prague, supervised by <a href=\"https://gustiks.github.io/\">Gustav Šír</a>. I work on making AI systems understandable and accountable: mechanistic interpretability to understand what models actually compute, and responsible AI to make sure explanations serve oversight, regulation, and the people affected by AI decisions. On the technical side, my PhD develops neurosymbolic methods for mechanistic interpretability, such as logic-guided circuit discovery and provably sufficient explanations of graph neural networks. I review for the Neurosymbolic Artificial Intelligence journal and have reviewed for NeurIPS 2026 and ICANN 2026.",

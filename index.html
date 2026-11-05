@@ -13,7 +13,7 @@ layout: default
     <p class="intro-tagline">{{ p.tagline }}</p>
     <ul class="intro-links">
       {%- for link in p.links %}
-      <li><a href="{{ link.url }}"><i class="{{ link.icon }}" aria-hidden="true"></i>{{ link.text }}</a></li>
+      <li><a href="{{ link.url }}">{% include icon.html name=link.icon %}{{ link.text }}</a></li>
       {%- endfor %}
     </ul>
   </div>

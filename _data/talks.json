@@ -15,12 +15,10 @@
       "links": [
         {
           "text": "Event page",
-          "icon": "fas fa-calendar-alt",
           "url": "https://rai.fel.cvut.cz/events/prague-workshop-responsible-ai-2026/"
         },
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/rai-workshop-2026-recap/"
         }
       ]
@@ -38,7 +36,6 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/scicomm-meetup/"
         }
       ]
@@ -56,7 +53,6 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/cefig-study-visit/"
         }
       ]
@@ -75,7 +71,6 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/ai_days_25/"
         }
       ]
@@ -92,12 +87,10 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/leuven-risk/"
         },
         {
           "text": "Book of abstracts",
-          "icon": "fas fa-book",
           "url": "https://www.kuleuven.be/ethics-kuleuven/chair-ai/conference-ai-risks/xrisk-book_of_abstracts-1.pdf"
         }
       ]
@@ -115,12 +108,10 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/conferences/poster-xai-alignment/"
         },
         {
           "text": "Proceedings",
-          "icon": "fas fa-book",
           "url": "https://poster2025.sciencesconf.org/data/pages/POSTER_2025.pdf"
         }
       ]
@@ -138,7 +129,6 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/aidev-ethics-talk-report/"
         }
       ]
@@ -155,7 +145,6 @@
       "links": [
         {
           "text": "Event report",
-          "icon": "fas fa-file-alt",
           "url": "https://rai.fel.cvut.cz/events/rai-talk-report/"
         }
       ]

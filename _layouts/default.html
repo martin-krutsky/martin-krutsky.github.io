@@ -20,13 +20,13 @@
   <meta property="og:image" content="{{ site.url }}/{{ site.data.profile.photo }}">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/lora-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/lora-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
       <span class="footer-links">
         {%- for link in site.data.profile.links %}
         {%- unless link.text == "CV" %}
-        <a href="{{ link.url }}" aria-label="{{ link.text }}" title="{{ link.text }}"><i class="{{ link.icon }}" aria-hidden="true"></i></a>
+        <a href="{{ link.url }}" aria-label="{{ link.text }}" title="{{ link.text }}">{% include icon.html name=link.icon %}</a>
         {%- endunless %}
         {%- endfor %}
       </span>

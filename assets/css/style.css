@@ -168,6 +168,8 @@ h2 {
 .intro-role { margin: 0; color: var(--muted); }
 .intro-tagline { margin: .25rem 0 1rem; font-family: var(--serif); font-style: italic; }
 .intro-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+/* Inline SVG icons: sized and colored like the surrounding text */
+.icon { height: 1em; width: auto; flex-shrink: 0; fill: currentColor; vertical-align: -0.125em; }
 .intro-links a {
   display: inline-flex; align-items: center; gap: .35rem;
   padding: .15rem .6rem; border: 1px solid var(--border); border-radius: 999px;
